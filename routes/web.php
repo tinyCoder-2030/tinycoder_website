@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/dashbord', function () {
+    return view('backend.index');
+});
