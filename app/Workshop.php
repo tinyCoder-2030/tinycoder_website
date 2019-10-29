@@ -12,6 +12,6 @@ class Workshop extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'time', 'date','detail',
+        'name', 'from_time', 'to_date','detail','from_age','to_age','from_date','girle','boy'
     ];
 }

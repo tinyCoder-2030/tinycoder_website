@@ -1,6 +1,7 @@
- <script src="{{asset('admin/assets/js/core/jquery.min.js')}}"></script>
+{{-- <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> --}}
   <script src="{{asset('admin/assets/js/core/popper.min.js')}}"></script>
   <script src="{{asset('admin/assets/js/core/bootstrap.min.js')}}"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="{{asset('admin/assets/js/plugins/perfect-scrollbar.jquery.min.js')}}"></script>
 
   <!-- Chart JS -->

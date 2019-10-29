@@ -1,9 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
+
 
 use App\Workshop;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
+use App\Http\Controllers\Controller;
+use Yajra\DataTables\Facades\DataTables;
 
 class WorkshopController extends Controller
 {
@@ -43,7 +47,36 @@ class WorkshopController extends Controller
     {
         return view('workshops.create');
     }
+   public function get_data(Request $request){
+    $workshops = Workshop::orderBy('created_at', 'desc')->get();
+    dd($workshops);
+    return DataTables::of($workshops)
+    ->addIndexColumn()
+    ->addColumn('actions', function ($q) {
+        $view = "";
+        $edit = "";
 
+        $delete = "";
+    
+
+            $edit = view('backend.datatable.action-edit')
+                ->with(['route' => route('workshops.edit', ['workshop' => $q->id])])
+                ->render();
+            $view .= $edit;
+
+            $delete = view('backend.datatable.action-delete')
+                ->with(['route' => route('workshops.destroy', ['workshop' => $q->id])])
+                ->render();
+            $view .= $delete;
+
+        return $view;
+
+    })
+    ->rawColumns(['actions', 'icon'])
+    ->make();
+
+
+   }
 
     /**
      * Store a newly created resource in storage.

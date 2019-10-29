@@ -16,9 +16,15 @@ class CreateWorkshopsTable extends Migration
         Schema::create('workshops', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->date('date');
-            $table->time('time');
-            $table->text('detail');
+            $table->date('from_date')->nullable();
+            $table->date('to_date')->nullable();
+            $table->time('from_time')->nullable();
+            $table->time('to_time')->nullable();
+            $table->integer('from_age')->nullable();
+            $table->integer('to_age')->nullable();
+            $table->boolean('girl')->nullable();
+            $table->boolean('boy')->nullable();
+            $table->text('detail')->nullable();
             $table->timestamps();
         });
     }

@@ -46,14 +46,29 @@
             	    <div class="col-xs-12 col-sm-12 col-md-12">
 		        <div class="form-group">
 		            <strong>time:</strong>
-		              <input placeholder="Selected time" name="time"type="text" id="input_starttime" class="form-control timepicker">
+		              <input placeholder="Selected time" name="from_time"type="text" id="input_starttime" class="form-control timepicker">
+  <label for="input_starttime">Twelve hour clock</label>
+		        </div>
+		    </div>
+
+			     	    <div class="col-xs-12 col-sm-12 col-md-12">
+		        <div class="form-group">
+		            <strong>time:</strong>
+		              <input placeholder="Selected time" name="to_time"type="text" id="input_starttime" class="form-control timepicker">
   <label for="input_starttime">Twelve hour clock</label>
 		        </div>
 		    </div>
             	    <div class="col-xs-12 col-sm-12 col-md-12">
 		        <div class="form-group">
 		            <strong>date:</strong>
-		           <input placeholder="Selected date" name="date"type="text" id="date-picker-example" class="form-control datepicker">
+		           <input placeholder="Selected date" name="from_date"type="text" id="date-picker-example" class="form-control datepicker">
+  <label for="date-picker-example">Try me...</label>
+		        </div>
+		    </div>
+			    	    <div class="col-xs-12 col-sm-12 col-md-12">
+		        <div class="form-group">
+		            <strong>date:</strong>
+		           <input placeholder="Selected date" name="to_date"type="text" id="date-picker-example" class="form-control datepicker">
   <label for="date-picker-example">Try me...</label>
 		        </div>
 		    </div>
