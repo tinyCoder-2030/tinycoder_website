@@ -34,7 +34,7 @@
 
 </head>
 
-<body>
+<body dir="rtl">
 
   <header role="banner">
     <nav class="navbar navbar-expand-lg  bg-dark">
@@ -50,26 +50,20 @@
         <div class="collapse navbar-collapse" id="navbarsExample05">
           <ul class="navbar-nav pl-md-5 ml-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="{{ route('index') }}">Home</a>
+              <a class="nav-link active" href="{{ route('index') }}">الرئيسية</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('about-us') }}">About</a>
-            </li>
+        
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="services.html" id="dropdown04" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">Services</a>
+              <a class="nav-link dropdown-toggle" id="dropdown04" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">التسجيل</a>
               <div class="dropdown-menu" aria-labelledby="dropdown04">
-                <a class="dropdown-item" href="#">Branding</a>
-                <a class="dropdown-item" href="#">Web Design</a>
-                <a class="dropdown-item" href="#">App Design</a>
-                <a class="dropdown-item" href="#">Start Up</a>
+                <a class="dropdown-item" href="{{ route('login') }}">تسجيل دخول</a>
+                <a class="dropdown-item" href="{{ route('register') }}">التسجيل</a>
+               
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="portfolio.html">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('contact-us') }}">Contact</a>
+              <a class="nav-link" href="portfolio.html">الدورات</a>
             </li>
           </ul>
 
@@ -99,6 +93,7 @@
       <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
       <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
         stroke="#ffc107" /></svg></div>
+
   <section class="script">
    @yield('script')
 @extends('frontend.layouts.script')

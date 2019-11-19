@@ -7,8 +7,8 @@
     <div class="container">
       <div class="row slider-text align-items-center justify-content-center">
         <div class="col-lg-12 text-center col-sm-12">
-          <p data-aos="fade-up" data-aos="fade-up" data-aos-delay="">Free template under createive commons license by <a href="https://free-template.co/" target="_blank">Free-Template.co</a></p>
-          <h1 class="mb-4" data-aos="fade-up" data-aos-delay="100">We create awesome stuff.</h1>
+          <p data-aos="fade-up" data-aos="fade-up" data-aos-delay="">المبرمجون الصغار</p>
+          <p class="mb-4" data-aos="fade-up" data-aos-delay="100"style="font-size:30px;">هدفنا نشر المفاهيم البرمجية والتفكير المنطقي بين أطفالنا</p>
           <div class="btn-play-wrap mx-auto" data-aos="fade-up" data-aos-delay="200">
             <a href="https://youtu.be/ckzm98yXB5E" data-fancybox data-ratio="2"
                 class="btn-play"><span class="ion ion-ios-play"></span></a>
@@ -144,7 +144,7 @@
     </div>
   </div>
 
-  <div class="section bg-light block-11">
+  <div class="section bg-light block-11" dir="ltr">
     <div class="container">
       <div class="row justify-content-center mb-5">
         <div class="col-md-8 text-center">

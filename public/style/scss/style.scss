@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5 {
 .btn, .form-control {
 	outline: none;
 	box-shadow: none!important;
-	border-radius: 0;
+	border-radius: 25px;
 	&:focus, &:active {
 		outline: none;
 	}
@@ -66,7 +66,9 @@ textarea.form-control {
 .btn {
 	font-size: 13px;
 	text-transform: uppercase;
+	border-radius: 25px;
 	letter-spacing: .2em;
+
 	font-weight: 900;
 	&.btn-primary {
 		color: $white;
@@ -809,10 +811,19 @@ header {
 	display: block;
 	margin-bottom: 10px;
 }
+//login
+.login{
+	background-color: #ffffff;
+  border: 1px solid #b6432e;
+  opacity: 0.7;
+  border-radius: 25px;
+  color:black;
+  filter: alpha(opacity=70);
+}
 // Footer
-.site-footer {
+.site-footer { 
 	padding: 7em 0;
-	background: lighten(#d5a500, 10%);
+	background: lighten(#fa983a, 10%);
 	p {
 		color: $black;
 		&:last-child {
@@ -1222,7 +1233,7 @@ header {
 	text-transform: uppercase;
 	font-size: 14px;
 	font-weight: bold;
-	border-radius: 0px;
+  border-radius: 25px;
 	padding: 10px 20px;
 	color: $white;
 	&:hover {
