@@ -1,0 +1,10 @@
+<script src="{{asset('style/js/jquery-3.2.1.min.js')}}"></script>
+  <script src="{{asset('style/js/jquery-migrate-3.0.1.min.js')}}"></script>
+  <script src="{{asset('style/js/popper.min.js')}}"></script>
+  <script src="{{asset('style/js/bootstrap.min.js')}}"></script>
+  <script src="{{asset('style/js/owl.carousel.min.js')}}"></script>
+  <script src="{{asset('style/js/jquery.waypoints.min.js')}}"></script>
+  <script src="{{asset('style/js/jquery.fancybox.min.js')}}"></script>
+  <script src="{{asset('style/js/jquery.stellar.min.js')}}"></script>
+  <script src="{{asset('style/js/aos.js')}}"></script>
+  <script src="{{asset('style/js/main.js')}}"></script>

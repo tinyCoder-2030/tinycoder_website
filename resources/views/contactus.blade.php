@@ -1,13 +1,13 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-<div class="slider-item overlay" data-stellar-background-ratio="0.5"
+  <div class="slider-item overlay" data-stellar-background-ratio="0.5"
     style="background-image: url('images/hero_2.jpg');">
     <div class="container">
       <div class="row slider-text align-items-center justify-content-center text-center">
         <div class="col-lg-12 col-sm-12">
-          <h1 class="mb-4" data-aos="fade-up" data-aos-delay="">Office Life</h1>
-          <p class="custom-breadcrumbs" data-aos="fade-up" data-aos-delay="100"><a href="index.html">Home</a> <span class="mx-3">/</span> About</p>
+          <h1 class="mb-4" data-aos="fade-up" data-aos-delay="">Contact Us</h1>
+          <p class="custom-breadcrumbs" data-aos="fade-up" data-aos-delay="100"><a href="{{ route('index') }}">Home</a> <span class="mx-3">/</span> Contact</p>
         </div>
       </div>
     </div>
@@ -15,64 +15,33 @@
 
   <div class="section">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 order-md-2" data-aos="fade-up" data-aos-delay="100">
-          <figure class="img-dotted-bg">
-            <img src="images/hero_2.jpg" alt="Image" class="img-fluid">
-          </figure>
-        </div>
-        <div class="col-md-5 mr-auto" data-aos="fade-up" data-aos-delay="">
-          <h2 class="mb-4 section-title"><strong>Creativity</strong> is our DNA</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, quos, adipisci aliquid similique
-            saepe ipsa minus maxime alias libero nam quis officia eum impedit. At quisquam reprehenderit cum hic enim?</p>
-          <p>Necessitatibus eligendi molestias similique tempore, optio nobis numquam temporibus debitis cum aspernatur,
-            eius, nihil soluta sapiente enim. </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="section">
-    <div class="container">
-      <div class="row justify-content-center mb-5">
-        <div class="col-md-8 text-center" data-aos="fade-up" data-aos-delay="">
-          <h2 class="mb-4 section-title">Meet Our <strong>Team</strong></h2>
-        </div>
-      </div>
+
       <div class="row">
-        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="media d-block media-custom text-center">
-            <a href="#"><img src="images/person_1.jpg" alt="Image Placeholder" class="img-fluid"></a>
-            <div class="media-body">
-              <h3 class="mt-0 text-black">Mellisa Howard</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam minus repudiandae amet.</p>
+        <div class="col-12 contact-form-contact-info">
+          <div class="row">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="">
+              <p class="d-flex">
+                <span class="ion-ios-location icon mr-5"></span>
+                <span>34 Street Name, City Name Here, United States</span>
+              </p>
+            </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <p class="d-flex">
+                <span class="ion-ios-telephone icon mr-5"></span>
+                <span>+1 242 4942 290</span>
+              </p>
+            </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <p class="d-flex">
+                <span class="ion-android-mail icon mr-5"></span>
+                <span>info@yourdomain.com</span>
+              </p>
             </div>
           </div>
         </div>
-        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="media d-block media-custom text-center">
-            <a href="#"><img src="images/person_2.jpg" alt="Image Placeholder" class="img-fluid"></a>
-            <div class="media-body">
-              <h3 class="mt-0 text-black">Mike Richardson</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam minus repudiandae amet.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="media d-block media-custom text-center">
-            <a href="#"><img src="images/person_1.jpg" alt="Image Placeholder" class="img-fluid"></a>
-            <div class="media-body">
-              <h3 class="mt-0 text-black">Laura Smith</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam minus repudiandae amet.</p>
-            </div>
-          </div>
-        </div>
-  
       </div>
-  
     </div>
   </div>
-  <!-- END section -->
 
   <div class="section bg-light block-11">
     <div class="container">
@@ -176,4 +145,5 @@
 
     </div>
   </div>
-@endsection
+
+  @endsection

@@ -11,13 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 Route::get('/dashbord', function () {
     return view('backend.index');
 });
-
+Route::get('/contact-us', 'frontend\ContactUS@index')->name('contact-us');
+Route::get('/about-us', 'frontend\ContactUS@about')->name('about-us');
+Route::get('/', 'frontend\HomeController@index')->name('index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

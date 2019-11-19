@@ -1,114 +1,16 @@
+@extends('frontend.layouts.app')
 
-<!-- 
-////////////////////////////////////////////////////////////////
-
-Author: Free-Template.co
-Author URL: http://free-template.co.
-License: https://creativecommons.org/licenses/by/3.0/
-License URL: https://creativecommons.org/licenses/by/3.0/
-Site License URL: https://free-template.co/template-license/
-  
-Website:  https://free-template.co
-Facebook: https://www.facebook.com/FreeDashTemplate.co
-Twitter:  https://twitter.com/Free_Templateco
-RSS Feed: https://feeds.feedburner.com/Free-templateco
-
-////////////////////////////////////////////////////////////////
--->
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <title>CardBoard &mdash; Free Website Template by Free-Template.co</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
-  <meta name="author" content="Free-Template.co" />
-
-  <link rel="shortcut icon" href="ftco-32x32.png">
-
-  <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display:400,400i|Roboto+Mono&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="{{asset('style/css/animate.css')}}">
-  <link rel="stylesheet" href="{{asset('style/css/owl.carousel.min.css')}}">
-  <link rel="stylesheet" href="{{asset('style/css/jquery.fancybox.min.css')}}">
-
-
-  <link rel="stylesheet" href="{{asset('style/fonts/ionicons/css/ionicons.min.css')}}">
-  <link rel="stylesheet" href="{{asset('style/fonts/fontawesome/css/font-awesome.min.css')}}">
-  <link rel="stylesheet" href="{{asset('style/fonts/flaticon/font/flaticon.css')}}">
-  <link rel="stylesheet" href="{{asset('style/css/aos.css')}}">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
-
-  <!-- Theme Style -->
-  <link rel="stylesheet" href="{{asset('style/css/style.css')}}">
-
-</head>
-
-<body>
-
-  <header role="banner">
-    <nav class="navbar navbar-expand-lg  bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand " href="index.html">CardBoard</a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
-          aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-   
-        <div class="collapse navbar-collapse" id="navbarsExample05">
-          <ul class="navbar-nav pl-md-5 ml-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="services.html" id="dropdown04" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">Services</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown04">
-                <a class="dropdown-item" href="#">Branding</a>
-                <a class="dropdown-item" href="#">Web Design</a>
-                <a class="dropdown-item" href="#">App Design</a>
-                <a class="dropdown-item" href="#">Start Up</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="portfolio.html">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
-
-          <div class="navbar-nav ml-auto">
-            <form method="post" class="search-form">
-              <span class="icon ion ion-search"></span>
-              <input type="text" class="form-control" placeholder="Search...">
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </nav>
-  </header>
-  <!-- END header -->
+@section('content')
 
   <div class="slider-item overlay" data-stellar-background-ratio="0.5"
-    style="background-image: url({{asset('style/images/hero_2.jpg')}})">
+    style="background-image: url({{asset('style/images/hero.png')}})">
     <div class="container">
       <div class="row slider-text align-items-center justify-content-center">
         <div class="col-lg-12 text-center col-sm-12">
           <p data-aos="fade-up" data-aos="fade-up" data-aos-delay="">Free template under createive commons license by <a href="https://free-template.co/" target="_blank">Free-Template.co</a></p>
           <h1 class="mb-4" data-aos="fade-up" data-aos-delay="100">We create awesome stuff.</h1>
           <div class="btn-play-wrap mx-auto" data-aos="fade-up" data-aos-delay="200">
-            <a href="https://www.youtube.com/watch?v=_VnYSoMI-9Q" data-fancybox data-ratio="2"
+            <a href="https://youtu.be/ckzm98yXB5E" data-fancybox data-ratio="2"
                 class="btn-play"><span class="ion ion-ios-play"></span></a>
           </div>
 
@@ -345,83 +247,4 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
     </div>
   </div>
 
-  
-
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-md-4 mb-5">
-          <h3 class="mb-4">About Craft</h3>
-          <p class="mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias nihil numquam aspernatur
-            inventore sint eligendi nostrum!</p>
-          <ul class="list-unstyled footer-link d-flex footer-social">
-            <li><a href="#" class="p-2"><span class="fa fa-twitter"></span></a></li>
-            <li><a href="#" class="p-2"><span class="fa fa-facebook"></span></a></li>
-            <li><a href="#" class="p-2"><span class="fa fa-linkedin"></span></a></li>
-            <li><a href="#" class="p-2"><span class="fa fa-instagram"></span></a></li>
-          </ul>
-
-        </div>
-        <div class="col-md-5 mb-5 pl-md-5">
-          <div class="mb-5">
-            <h3 class="mb-4">Contact Info</h3>
-            <ul class="list-unstyled footer-link quick-contact">
-              <li class="d-block">
-                <span class="d-block caption">Address:</span>
-                <span class="caption-text">34 Street Name, City Name Here, United States</span>
-              </li>
-              <li class="d-block">
-                <span class="d-block caption">Telephone:</span><span class="caption-text">+1 242 4942 290</span>
-              </li>
-              <li class="d-block">
-                <span class="d-block caption">Email:</span><span class="caption-text">info@yourdomain.com</span>
-              </li>
-            </ul>
-          </div>
-
-          
-        </div>
-        <div class="col-md-3 mb-5">
-          <h3 class="mb-4">Quick Links</h3>
-          <ul class="list-unstyled footer-link">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Terms of Use</a></li>
-            <li><a href="#">Disclaimers</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-        <div class="col-md-3">
-
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 text-md-center text-left">
-          <!-- Link back to Free-Template.co can't be removed. Template is licensed under CC BY 3.0. -->
-              <p class="copyright"><small>&copy;
-                  <script>document.write(new Date().getFullYear());</script> Cardboard. All Rights Reserved. Design by <a
-                    href="https://free-template.co" target="_blank">Free-Template.co</a></small></p>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- END footer -->
-
-  <!-- loader -->
-  <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
-      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-        stroke="#ffc107" /></svg></div>
-
-  <script src="{{asset('style/js/jquery-3.2.1.min.js')}}"></script>
-  <script src="{{asset('style/js/jquery-migrate-3.0.1.min.js')}}"></script>
-  <script src="{{asset('style/js/popper.min.js')}}"></script>
-  <script src="{{asset('style/js/bootstrap.min.js')}}"></script>
-  <script src="{{asset('style/js/owl.carousel.min.js')}}"></script>
-  <script src="{{asset('style/js/jquery.waypoints.min.js')}}"></script>
-  <script src="{{asset('style/js/jquery.fancybox.min.js')}}"></script>
-  <script src="{{asset('style/js/jquery.stellar.min.js')}}"></script>
-  <script src="{{asset('style/js/aos.js')}}"></script>
-  <script src="{{asset('style/js/main.js')}}"></script>
-</body>
-
-</html>
+   @endsection
