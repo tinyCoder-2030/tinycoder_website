@@ -13,7 +13,7 @@
 
 Route::get('/dashbord', function () {
     return view('backend.index');
-});
+})->name('dashbord');
 Route::get('/contact-us', 'frontend\ContactUS@index')->name('contact-us');
 Route::get('/about-us', 'frontend\HomeController@about')->name('about-us');
 Route::get('/', 'frontend\HomeController@index')->name('index');
@@ -24,6 +24,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles','Admin\RoleController');
+    Route::resource('testimonal','Admin\TestimonialController');
     Route::resource('users','Admin\UserController');
     Route::resource('workshops','Admin\WorkshopController');
     Route::get('workshop_get_data','Admin\WorkshopController@get_data')->name('workshops.get_data');

@@ -53,17 +53,60 @@
               <a class="nav-link active" href="{{ route('index') }}">الرئيسية</a>
             </li>
         
-            <li class="nav-item dropdown">
+            {{-- <li class="nav-item dropdown">
+             @guest
               <a class="nav-link dropdown-toggle" id="dropdown04" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">التسجيل</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown04">
+               aria-expanded="false">التسجيل</a>
+              
+              <div class="dropdown-menu dropdown-toggle" data-toggle="dropdown"aria-labelledby="dropdown04">التسجيل
                 <a class="dropdown-item" href="{{ route('login') }}">تسجيل دخول</a>
                 <a class="dropdown-item" href="{{ route('register') }}">التسجيل</a>
-               
+             
               </div>
-            </li>
+                @endguest
+            </li> --}}
             <li class="nav-item">
               <a class="nav-link" href="portfolio.html">الدورات</a>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link" href="https://salla.sa/tiny_coders">المتجر</a>
+            </li>
+                <li class="nav-item">
+              <a class="nav-link" href="portfolio.html">حجز موعد</a>
+            </li>
+            </li>
+              @guest
+              <li class="nav-item">
+              <a class="nav-link" href="{{ route('login') }}">تسجيل دخول</a>
+            </li>
+            @else
+            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                       تسجيل خروج
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                            @if(auth()->user()->hasRole('admin'))
+                                   <a class="dropdown-item" href=" {{ route('dashbord') }}"
+                                       >
+                                      لوحة التحكم
+                                    </a>
+                                    @endif
+                                     </div>
+                            </li>
+            @endguest
+                <li class="nav-item">
+              <a class="nav-link" href="{{ route('about-us') }}">من نحن</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('contact-us') }}">تواصل معنا</a>
             </li>
           </ul>
 

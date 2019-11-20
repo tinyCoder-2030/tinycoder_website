@@ -155,7 +155,7 @@
         <div class="item">
           <div class="block-33 h-100">
             <div class="vcard d-flex mb-3">
-              <div class="image align-self-center"><img src="{{asset('style/images/person_1.jpg')}}"alt="Person here"></div>
+              <div class="image align-self-center"><img src="{{asset('style/images/person.jpg')}}"alt="Person here"></div>
               <div class="name-text align-self-center">
                 <h2 class="heading">Carl Smith</h2>
                 <span class="meta">Customer Corp.</span>
@@ -174,7 +174,7 @@
         <div class="item">
           <div class="block-33 h-100">
             <div class="vcard d-flex mb-3">
-              <div class="image align-self-center"><img src="{{asset('style/images/person_2.jpg')}}" alt="Person here"></div>
+              <div class="image align-self-center"><img src="{{asset('style/images/person.jpg')}}" alt="Person here"></div>
               <div class="name-text align-self-center">
                 <h2 class="heading">Craig Darren</h2>
                 <span class="meta">Customer Corp.</span>
@@ -194,7 +194,7 @@
         <div class="item">
           <div class="block-33 h-100">
             <div class="vcard d-flex mb-3">
-              <div class="image align-self-center"><img src="images/person_1.jpg" alt="Person here"></div>
+              <div class="image align-self-center"><img src="{{asset('style/images/person.jpg')}}" alt="Person here"></div>
               <div class="name-text align-self-center">
                 <h2 class="heading">John Smith</h2>
                 <span class="meta">Customer Corp.</span>
@@ -212,7 +212,7 @@
         <div class="item">
           <div class="block-33 h-100">
             <div class="vcard d-flex mb-3">
-              <div class="image align-self-center"><img src="images/person_2.jpg" alt="Person here"></div>
+              <div class="image align-self-center"><img src="{{asset('style/images/person.jpg')}}" alt="Person here"></div>
               <div class="name-text align-self-center">
                 <h2 class="heading">John Smith</h2>
                 <span class="meta">Customer Corp.</span>

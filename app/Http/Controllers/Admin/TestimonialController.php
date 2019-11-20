@@ -3,8 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Testimonial;
-use Illuminate\Http\Request;
 
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Gate;
+use App\User;
+use Spatie\Permission\Models\Role;
+use DB;
+use Hash;
 class TestimonialController extends Controller
 {
     /**
