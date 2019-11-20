@@ -116,14 +116,7 @@
                 createdRow: function (row, data, dataIndex) {
                     $(row).attr('data-entry-id', data.id);
                 },
-                language:{
-                   
-                    buttons :{
-                        colvis : '{{trans("datatable.colvis")}}',
-                        pdf : '{{trans("datatable.pdf")}}',
-                        csv : '{{trans("datatable.csv")}}',
-                    }
-                }
+               
             });
    
         });

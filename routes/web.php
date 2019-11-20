@@ -24,8 +24,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles','Admin\RoleController');
-    Route::resource('testimonal','Admin\TestimonialController');
+    Route::resource('testimonial','Admin\TestimonialController');
     Route::resource('users','Admin\UserController');
+    Route::get('get-users-data', ['uses' => 'Admin\TestimonialController@getData', 'as' => 'users.get_data']);
     Route::resource('workshops','Admin\WorkshopController');
     Route::get('workshop_get_data','Admin\WorkshopController@get_data')->name('workshops.get_data');
 });

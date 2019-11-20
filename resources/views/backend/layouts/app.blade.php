@@ -38,6 +38,10 @@ The above copyright notice and this permission notice shall be included in all c
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="{{asset('admin/assets/demo/demo.css')}}" rel="stylesheet" />
 
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
+
+
   <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
 </head>
 
@@ -55,10 +59,10 @@ The above copyright notice and this permission notice shall be included in all c
     </div>
   </div>
   <!--   Core JS Files   -->
-   <section class="script">
+
    @yield('script')
 @extends('backend.layouts.script')
-     </section>
+ 
 </body>
 
 </html>
