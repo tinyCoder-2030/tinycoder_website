@@ -25,7 +25,7 @@ if(!auth()->user()->hasRole('admin'))
 {
     return abort(401);
 }
-        return view('backend.testimonials.index');
+        return view('backend.welcome');
     }
 
     /**
