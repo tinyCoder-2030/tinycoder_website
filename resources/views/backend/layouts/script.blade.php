@@ -1,15 +1,18 @@
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="{{ asset('bower_components/jquery/dist/jquery.min.js')}}"type="text/javascript"></script>
 <!-- jQuery UI 1.11.4 -->
-<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+
+        <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
+   <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.colVis.min.js"></script>
+        <script src="https://cdn.datatables.net/select/1.2.0/js/dataTables.select.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button);
-</script>
+
 <!-- Bootstrap 3.3.7 -->
 <script src="{{ asset('bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+<script src="{{ asset('bower_components/jquery-ui/jquery-ui.min.js')}}"></script>
 <!-- Morris.js charts -->
-<script src="{{ asset('bower_components/raphael/raphael.min.js')}}"></script>
-<script src="{{ asset('bower_components/morris.js/morris.min.js')}}"></script>
+{{-- <script src="{{ asset('bower_components/raphael/raphael.min.js')}}"></script> --}}
+{{-- <script src="{{ asset('bower_components/morris.js/morris.min.js')}}"></script> --}}
 <!-- Sparkline -->
 <script src="{{ asset('bower_components/jquery-sparkline/dist/jquery.sparkline.min.js')}}"></script>
 <!-- jvectormap -->
@@ -34,3 +37,6 @@
 <script src="{{ asset('dist/js/pages/dashboard.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('dist/js/demo.js')}}"></script>
+<script >
+  $.widget.bridge('uibutton', $.ui.button);
+</script>

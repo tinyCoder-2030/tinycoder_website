@@ -7,6 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Laravel 5.8 User Roles and Permissions Tutorial') }}</title>
     <!-- Scripts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     
     <script src="{{ asset('js/app.js') }}" defer></script>
     <!-- Fonts -->

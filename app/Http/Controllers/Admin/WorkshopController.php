@@ -49,7 +49,6 @@ class WorkshopController extends Controller
     }
    public function get_data(Request $request){
     $workshops = Workshop::orderBy('created_at', 'desc')->get();
-    dd($workshops);
     return DataTables::of($workshops)
     ->addIndexColumn()
     ->addColumn('actions', function ($q) {
