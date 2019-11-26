@@ -10,18 +10,16 @@
       <div class="row">
         <div class="col-12">
           <div class="card">
-            <div class="card-header">
-              <div class="float-right">
-              <h3 class="card-title">workshops </h3>
-            </div>
+            <div class="card-header "style="margin-bottom:20px;">
+             
+              <h3 class="card-title" style="display:inline;">workshops </h3>
+               <a style="display:inline;left:25%px;" href="{{ route('workshops.create') }}"
+                       class="btn btn-success float-right">create</a>
+        
             </div>
             <!-- /.card-header -->
             <div class="card-body">
-                <div class="float-right">
-                    <a href="{{ route('workshops.create') }}"
-                       class="btn btn-success">create</a>
-
-                </div>
+               
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
@@ -80,7 +78,7 @@
                             columns: [ 1, 2, 3, 4,5 ]
                         }
                     },
-                    'colvis'
+                    
                 ],
                 ajax: route,
                 columns: [
