@@ -2,7 +2,7 @@
 
 
 @section('content')
-<div class="container" style="background-color: #ffffff;margin-left: 0px;padding-right:60px;">
+<div class="container" style="background-color: #ffffff;margin-left: 0px;padding-left:20px;padding-right:20px;">
 
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -37,28 +37,69 @@
 
 
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-6">
                 <div class="form-group">
-                    <strong>Name:</strong>
+                    <strong>Name:*</strong>
                     <input type="text" name="name" value="{{ $workshop->name }}" class="form-control"
                         placeholder="Name">
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Detail:</strong>
-                    <textarea class="form-control" style="height:150px" name="detail"
-                        placeholder="Detail">{!! $workshop->detail !!}</textarea>
+            <div class="col-6">
+                <div class="form-group ">
+                    <label class="control-label col-2 requiredField" for="date">
+                        Date:
+                        <span class="asteriskField">
+                            *
+                        </span>
+                    </label>
+
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-calendar">
+                            </i>
+                        </div>
+                        <input class="form-control" id="from_date" value="{{$workshop->from_date}}"name="from_date" placeholder="YYYY-MM-DD"
+                            type="text" />
+                    </div>
+
+                </div>
+</div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <strong>Detail:</strong>
+                        <textarea class="form-control" style="height:150px" name="detail"
+                            placeholder="Detail">{!! $workshop->detail !!}</textarea>
+                    </div>
+                </div>
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </div>
 
 
     </form>
 
 
 </div>
-    @endsection
+@endsection
+@section('script')
+
+
+<!-- Include Date Range Picker -->
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var date_input = $('input[name="from_date"]'); //our date input has the name "date"
+        var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+        date_input.datepicker({
+            format: 'yyyy-mm-dd',
+
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        })
+    })
+</script>
+
+@endsection

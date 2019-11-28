@@ -28,9 +28,7 @@
                                 <th>num</th>
                                 <th>name</th>
                
-                                <th>from date</th>
-
-                        <th>to date</th>
+                                <th> date</th>
   
                             <th>&nbsp; action</th>
                    
@@ -69,13 +67,13 @@
                     {
                         extend: 'csv',
                         exportOptions: {
-                            columns: [ 1, 2, 3, 4,5 ]
+                            columns: [ 1, 2, 3, 4 ]
                         }
                     },
                     {
                         extend: 'pdf',
                         exportOptions: {
-                            columns: [ 1, 2, 3, 4,5 ]
+                            columns: [ 1, 2, 3, 4 ]
                         }
                     },
                     
@@ -86,7 +84,6 @@
                     {data: "DT_RowIndex", name: 'DT_RowIndex'},
                     {data: "name", name: 'name'},
                     {data: "from_date", name: 'from_date'},
-                    {data: "to_date", name: 'to_date'},
                     {data: "actions", name: "actions"}
                 ],
 

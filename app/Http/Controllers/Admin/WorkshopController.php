@@ -87,6 +87,7 @@ class WorkshopController extends Controller
     {
         request()->validate([
             'name' => 'required',
+            'from_date' => 'required',
             'detail' => 'required',
         ]);
 
@@ -134,9 +135,8 @@ class WorkshopController extends Controller
     {
          request()->validate([
             'name' => 'required',
+            'from_date' => 'required',
             'detail' => 'required',
-            'date' => 'required',
-            'time' => 'required',
         ]);
 
 

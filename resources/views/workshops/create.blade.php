@@ -2,7 +2,9 @@
 
 
 @section('content')
-<div class="container float-center" style="background-color: #ffffff;margin-left: 0px;padding-right:10px;">
+
+<div class="container float-center"
+    style="background-color: #ffffff;margin-left: 0px;padding-left:20px;padding-right:20px;">
 
     <div class="row">
         <div class="col-12">
@@ -35,12 +37,39 @@
 
 
         <div class="row">
-            <div class="col-12">
+            <div class="col-6">
                 <div class="form-group">
-                    <strong>Name:</strong>
+                    <strong>Name:*</strong>
                     <input type="text" name="name" class="form-control" placeholder="Name">
                 </div>
             </div>
+            <div class="col-6">
+                <div class="form-group ">
+                    <label class="control-label col-2 requiredField" for="date">
+                        Date:
+                        <span class="asteriskField">
+                            *
+                        </span>
+                    </label>
+
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-calendar">
+                            </i>
+                        </div>
+                        <input class="form-control" id="from_date" name="from_date" placeholder="YYYY-MM-DD"
+                            type="text" />
+                    </div>
+
+                </div>
+            </div>
+
+      <div class="col-12form-group">
+                    {!! Form::label('workshop_image',  'workshop image', ['class' => 'control-label']) !!}
+                    {!! Form::file('workshop_image',  ['class' => 'form-control', 'accept' => 'image/jpeg,image/gif,image/png']) !!}
+              
+
+                </div>
             <div class="col-12">
                 <div class="form-group">
                     <strong>Detail:</strong>
@@ -64,9 +93,19 @@
 @section('script')
 
 
-
+<!-- Include Date Range Picker -->
 <script type="text/javascript">
+    $(document).ready(function () {
+        var date_input = $('input[name="from_date"]'); //our date input has the name "date"
+        var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+        date_input.datepicker({
+            format: 'yyyy-mm-dd',
 
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        })
+    })
 </script>
 
 @endsection
