@@ -33,8 +33,33 @@
 <script src="{{ asset('bower_components/fastclick/lib/fastclick.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('dist/js/adminlte.min.js')}}"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.9.5/tinymce.min.js"></script>
 
 
-<script >
+ <script type="text/javascript">
   $.widget.bridge('uibutton', $.ui.button);
+  var editor_config = {
+            selector: '#description-textarea',
+            directionality: document.dir,
+            path_absolute: "/",
+            menubar: 'edit insert view format table',
+            plugins: [
+                "advlist autolink lists link image charmap preview hr anchor pagebreak",
+                "searchreplace wordcount visualblocks visualchars code fullscreen",
+                "insertdatetime media save table contextmenu directionality",
+                "paste textcolor colorpicker textpattern"
+            ],
+            toolbar: "insertfile undo redo | formatselect styleselect | bold italic strikethrough forecolor backcolor permanentpen formatpainter | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media | fullscreen code",
+            relative_urls: false,
+            language: document.documentElement.lang,
+            height: 300,
+        }
+        tinymce.init(editor_config);
+ $(document).ready(function() {
+       tinymce.init({
+        selector : "textarea",
+        plugins : ["advlist autolink lists link image charmap print preview anchor", "searchreplace visualblocks code fullscreen", "insertdatetime media table contextmenu paste jbimages"],
+        toolbar : "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages",
+    });
+ });
 </script>
