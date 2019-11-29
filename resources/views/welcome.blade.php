@@ -36,47 +36,22 @@
     </div>
     <div class="container-fluid">
       <div class="row mb-5 no-gutters">
+      @foreach ($workshops as $workshop)
+          
+     
         <div class="col-sm-6 col-md-6 col-lg-6" data-aos="fade" data-aos-delay="100">
           <a href="portfolio-single.html" class="work-thumb">
             <div class="work-text">
-              <h2>Startup Brand</h2>
-              <p>Business</p>
+              <h2>{{$workshop->name}}</h2>
+              <p>{{$workshop->from_date}}</p>
             </div>
-            <img src="{{asset('style/images/work_1.jpg')}}" alt="Image" class="img-fluid">
+            @if($workshop->image())
+            <img src="{{$workshop->image()}}" style="height:400px;width:100%;"alt="Image" class="img-fluid">
+            @endif
           </a>
         </div>
-
-        <div class="col-sm-6 col-md-6 col-lg-6" data-aos="fade" data-aos-delay="200">
-          <a href="portfolio-single.html" class="work-thumb">
-            <div class="work-text">
-              <h2>Corporate Design</h2>
-              <p>Design</p>
-            </div>
-            <img src="{{asset('style/images/work_2.jpg')}}" alt="Image" class="img-fluid">
-          </a>
-        </div>
-
-        <div class="col-sm-6 col-md-6 col-lg-6" data-aos="fade" data-aos-delay="300">
-          <a href="portfolio-single.html" class="work-thumb">
-            <div class="work-text">
-              <h2>Unpacked Branding</h2>
-              <p>Business</p>
-            </div>
-            <img src= "{{asset('style/images/work_3.jpg')}}"alt="Image" class="img-fluid">
-          </a>
-        </div>
-
-        <div class="col-sm-6 col-md-6 col-lg-6" data-aos="fade" data-aos-delay="400">
-          <a href="portfolio-single.html" class="work-thumb">
-            <div class="work-text">
-              <h2>Rebranding Work</h2>
-              <p>Business</p>
-            </div>
-            <img src="{{asset('style/images/work_4.jpg')}}" alt="Image" class="img-fluid">
-          </a>
-        </div>
-
-      </div>
+ @endforeach
+       
       
       <div class="row mt-5">
         <div class="col-12 text-center">
@@ -144,89 +119,33 @@
     </div>
   </div>
 
-  <div class="section bg-light block-11" dir="ltr">
+  <div class="section  block-11" dir="ltr">
     <div class="container">
       <div class="row justify-content-center mb-5">
         <div class="col-md-8 text-center">
-          <h2 class="mb-4 section-title">Testimonial</h2>
+          <h2 class="mb-4 section-title" >اعضاء الفريق</h2>
         </div>
       </div>
-      <div class="nonloop-block-11 owl-carousel">
-        <div class="item">
-          <div class="block-33 h-100">
-            <div class="vcard d-flex mb-3">
-              <div class="image align-self-center"><img src="{{asset('style/images/person.jpg')}}"alt="Person here"></div>
+      <div class="nonloop-block-11 owl-carousel" style="height:90%;">
+      @foreach($testimonials as $testimonial)
+        <div class="item" style="  border-radius:25px;border-right: 2px solid #fa983a;border-left: 2px solid #fa983a;border-top: 2px solid #b6432e;border-bottom: 2px solid #b6432e;">
+          <div class="block-33" >
+            <div class="vcard d-flex mb-3" >
+              <div class="image align-self-center"><img src="{{$testimonial->image()}}"alt="Person here"></div>
               <div class="name-text align-self-center">
-                <h2 class="heading">Carl Smith</h2>
-                <span class="meta">Customer Corp.</span>
+                <h2 class="heading">{{$testimonial->name}}</h2>
+                <span class="meta"> {{ $testimonial->occupation }}</span>
               </div>
             </div>
-            <div class="text">
-              <blockquote>
-                <p>&rdquo; Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat qui, ipsum debitis id
-                  reprehenderit ut soluta possimus consectetur asperiores totam veniam quasi molestiae. Animi doloribus
-                  accusamus eius ex laudantium vitae? &ldquo;</p>
-              </blockquote>
+            <div class="text" style="direction:rtl;text-alignment:center;">
+
+                <p style="direction:rtl;"> {!! $testimonial->content !!}</p>
+             
             </div>
           </div>
         </div>
-
-        <div class="item">
-          <div class="block-33 h-100">
-            <div class="vcard d-flex mb-3">
-              <div class="image align-self-center"><img src="{{asset('style/images/person.jpg')}}" alt="Person here"></div>
-              <div class="name-text align-self-center">
-                <h2 class="heading">Craig Darren</h2>
-                <span class="meta">Customer Corp.</span>
-              </div>
-            </div>
-            <div class="text">
-              <blockquote>
-                <p>&rdquo; Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, ut enim error molestias maxime
-                  deserunt voluptate doloribus nihil nesciunt id perferendis, doloremque earum architecto ab incidunt
-                  sunt
-                  corrupti. Consequuntur qui ullam voluptates sapiente quod esse eum. &ldquo;</p>
-              </blockquote>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="block-33 h-100">
-            <div class="vcard d-flex mb-3">
-              <div class="image align-self-center"><img src="{{asset('style/images/person.jpg')}}" alt="Person here"></div>
-              <div class="name-text align-self-center">
-                <h2 class="heading">John Smith</h2>
-                <span class="meta">Customer Corp.</span>
-              </div>
-            </div>
-            <div class="text">
-              <blockquote>
-                <p>&rdquo; Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, ab? Asperiores dolore
-                  blanditiis quis sapiente soluta aliquid officiis. &ldquo;</p>
-              </blockquote>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="block-33 h-100">
-            <div class="vcard d-flex mb-3">
-              <div class="image align-self-center"><img src="{{asset('style/images/person.jpg')}}" alt="Person here"></div>
-              <div class="name-text align-self-center">
-                <h2 class="heading">John Smith</h2>
-                <span class="meta">Customer Corp.</span>
-              </div>
-            </div>
-            <div class="text">
-              <blockquote>
-                <p>&rdquo; Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, accusamus? Porro fugit culpa
-                  consequuntur dolorum. &ldquo;</p>
-              </blockquote>
-            </div>
-          </div>
-        </div>
-
+@endforeach
+       
       </div>
     </div>
   </div>

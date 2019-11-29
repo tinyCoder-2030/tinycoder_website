@@ -35,50 +35,45 @@ if(!auth()->user()->hasRole('admin'))
      */
     public function create()
     {
-        $data = User::latest()->get();
-        return DataTables::of($data)
-                ->addColumn('action', function($data){
-                    $button = '<button type="button" name="edit" id="'.$data->id.'" class="edit btn btn-primary btn-sm">Edit</button>';
-                    $button .= '&nbsp;&nbsp;&nbsp;<button type="button" name="edit" id="'.$data->id.'" class="delete btn btn-danger btn-sm">Delete</button>';
-                    return $button;
-                })
-                ->rawColumns(['action'])
-                ->make(true);
-    
-    dd($datat);
+        return view('backend.testimonials.create');
     }
 public function getData()
 {
-    $data = User::latest()->get();
+    $data = Testimonial::latest()->get();
     return DataTables::of($data)
-        ->addIndexColumn()
-        ->addColumn('actions', function ($q)  {
+    ->addIndexColumn()
+    ->addColumn('actions', function ($q)  {
+    
+        $view = "";
+        $edit = "";
+$show="";
+        $delete = "";
+
+            $edit = view('backend.datatable.action-edit')
+                ->with(['route' => route('testimonials.edit', ['testimonial' => $q->id])])
+                ->render();
+
+            $view .= $edit;
         
-            $view = "";
-            $edit = "";
 
-            $delete = "";
+            $show = view('backend.datatable.action-view')
+            ->with(['route' => route('testimonials.show', ['testimonial' => $q->id])])
+            ->render();
 
-                $edit = view('backend.datatable.action-edit')
-                    ->with(['route' => route('users.edit', ['user' => $q->id])])
-                    ->render();
+        $view .= $show;
+            $delete = view('backend.datatable.action-delete')
+                ->with(['route' => route('testimonials.destroy', ['testimonial' => $q->id])])
+                ->render();
+       
+$view.=$delete;
+              
+       
 
-                $view .= $edit;
-            
+        return $view;
 
-        
-                $delete = view('backend.datatable.action-delete')
-                    ->with(['route' => route('users.destroy', ['user' => $q->id])])
-                    ->render();
-           
-
-            //  $view .= '<a class="btn btn-primary mb-1 mr-2" href="' . route('admin.employee.show', ['section' => $q->id]) . '">' . trans('labels.backend.sections.show_employee') . '</a>';
-
-            return $view;
-
-        })
-        ->rawColumns(['actions', 'icon'])
-        ->make();
+    })
+    ->rawColumns(['actions', 'icon'])
+    ->make();
 }
     /**
      * Store a newly created resource in storage.
@@ -88,7 +83,24 @@ public function getData()
      */
     public function store(Request $request)
     {
-        //
+        request()->validate([
+        'name' => 'required',
+        'occupation' => 'required',
+        'content' => 'required',
+        ]);
+        $testimonial = Testimonial::create($request->except('image'));
+        if($request->hasFile('image'))
+{
+
+        $testimonial->clearMediaCollection('images');
+        $testimonial->addMediaFromRequest('image')
+        ->toMediaCollection('images');
+
+             
+}
+
+return redirect()->route('testimonials.index')
+->with('success','User created successfully');
     }
 
     /**
@@ -99,7 +111,7 @@ public function getData()
      */
     public function show(Testimonial $testimonial)
     {
-        //
+        return view('backend.testimonials.show',compact('testimonial'));
     }
 
     /**
@@ -108,9 +120,10 @@ public function getData()
      * @param  \App\Testimonial  $testimonial
      * @return \Illuminate\Http\Response
      */
-    public function edit(Testimonial $testimonial)
-    {
-        //
+    public function edit($id)
+    {  $testimonial = Testimonial::findOrFail($id);
+
+        return view('backend.testimonials.edit',compact('testimonial'));
     }
 
     /**
@@ -122,7 +135,24 @@ public function getData()
      */
     public function update(Request $request, Testimonial $testimonial)
     {
-        //
+        request()->validate([
+            'name' => 'required',
+            'occupation' => 'required',
+            'content' => 'required',
+            ]);
+            $testimonial->update($request->except('image'));
+            if($request->hasFile('image'))
+    {
+    
+            $testimonial->clearMediaCollection('images');
+            $testimonial->addMediaFromRequest('image')
+            ->toMediaCollection('images');
+    
+           
+             
+    }
+    return redirect()->route('testimonials.index')
+    ->with('success','User created successfully');
     }
 
     /**
@@ -133,6 +163,10 @@ public function getData()
      */
     public function destroy(Testimonial $testimonial)
     {
-        //
+        $testimonial->delete();
+        if($testimonial->image()){
+            $testimonial->clearMediaCollection('images');
+                    }
+        return redirect()->route('testimonials.index') ->with('success','Testimonial deleted successfully');
     }
 }

@@ -32,7 +32,7 @@
     @endif
 
 
-    <form action="{{ route('workshops.store') }}" method="POST">
+    <form action="{{ route('workshops.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
 
@@ -92,7 +92,8 @@
 @endsection
 @section('script')
 
-
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
 <!-- Include Date Range Picker -->
 <script type="text/javascript">
     $(document).ready(function () {

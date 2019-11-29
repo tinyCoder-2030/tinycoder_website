@@ -1,5 +1,5 @@
 @extends('backend.layouts.app')
-
+@section('title','workshop'.' | '.'Tiny Coder')
 
 @section('content')
 <div class="container" style="background-color: #ffffff;margin-left: 0px;padding-left:20px;padding-right:20px;">
@@ -31,7 +31,7 @@
     @endif
 
 
-    <form action="{{ route('workshops.update',$workshop->id) }}" method="POST">
+    <form action="{{ route('workshops.update',$workshop->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 
@@ -64,6 +64,15 @@
 
                 </div>
 </div>
+
+      <div class="col-12form-group">
+                    {!! Form::label('workshop_image',  'workshop image', ['class' => 'control-label']) !!}
+                    {!! Form::file('workshop_image',  ['class' => 'form-control', 'accept' => 'image/jpeg,image/gif,image/png']) !!}
+              @if( $workshop->image())
+              <img src="{{$workshop->image()}}">
+              @endif
+
+                </div>
                 <div class="col-12">
                     <div class="form-group">
                         <strong>Detail:</strong>

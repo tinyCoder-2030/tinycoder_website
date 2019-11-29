@@ -33,7 +33,7 @@ class WorkshopController extends Controller
     public function index()
     {
         $workshops = Workshop::latest()->paginate(5);
-        return view('workshops.index',compact('workshops'))
+        return view('backend.workshops.index',compact('workshops'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -45,7 +45,7 @@ class WorkshopController extends Controller
      */
     public function create()
     {
-        return view('workshops.create');
+        return view('backend.workshops.create');
     }
    public function get_data(Request $request){
     $workshops = Workshop::orderBy('created_at', 'desc')->get();
@@ -92,8 +92,12 @@ class WorkshopController extends Controller
         ]);
 
 
-        Workshop::create($request->all());
-
+       $workshop= Workshop::create($request->except('workshop_image'));
+        if($request->hasFile('workshop_image')){
+            $workshop->clearMediaCollection('images');
+            $workshop->addMediaFromRequest('workshop_image')
+            ->toMediaCollection('images');
+                    }
 
         return redirect()->route('workshops.index')
                         ->with('success','Workshop created successfully.');
@@ -108,7 +112,7 @@ class WorkshopController extends Controller
      */
     public function show(Workshop $workshop)
     {
-        return view('workshops.show',compact('workshop'));
+        return view('backend.workshops.show',compact('workshop'));
     }
 
 
@@ -120,7 +124,7 @@ class WorkshopController extends Controller
      */
     public function edit(Workshop $workshop)
     {
-        return view('workshops.edit',compact('workshop'));
+        return view('backend.workshops.edit',compact('workshop'));
     }
 
 
@@ -140,9 +144,13 @@ class WorkshopController extends Controller
         ]);
 
 
-        $workshop->update($request->all());
+        $workshop->update($request->except('workshop_image'));
 
-
+        if($request->hasFile('workshop_image')){
+            $workshop->clearMediaCollection('images');
+            $workshop->addMediaFromRequest('workshop_image')
+            ->toMediaCollection('images');
+                    }
         return redirect()->route('workshops.index')
                         ->with('success','Workshop updated successfully');
     }
@@ -158,7 +166,9 @@ class WorkshopController extends Controller
     {
         $workshop->delete();
 
-
+        if($workshop->image()){
+            $workshop->clearMediaCollection('images');
+                    }
         return redirect()->route('workshops.index')
                         ->with('success','Workshop deleted successfully');
     }

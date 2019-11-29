@@ -1,6 +1,9 @@
+
+
+
 @extends('backend.layouts.app')
 
-@section('title','testimonial'.' | '.'Tiny Coder')
+@section('title','workshop'.' | '.'Tiny Coder')
 @section('content')
 <div class="container" style="background-color: #ffffff;margin-left: 0px;padding-right:60px;">
     <section class="content">
@@ -9,8 +12,8 @@
           <div class="card">
             <div class="card-header "style="margin-bottom:20px;">
              
-              <h3 class="card-title" style="display:inline;">testimonials </h3>
-               <a style="display:inline;left:25%px;" href="{{ route('testimonials.create') }}"
+              <h3 class="card-title" style="display:inline;">workshops </h3>
+               <a style="display:inline;left:25%px;" href="{{ route('workshops.create') }}"
                        class="btn btn-success float-right">create</a>
         
             </div>
@@ -22,14 +25,14 @@
                 <tr>
                         
             
-                        <th>num</th>
-                        <th>name</th>
-                    <th>occupation</th>
-                    <th>content</th>
-                
-                        <th>actions</th>
-                  
-                             </tr>
+                                <th>num</th>
+                                <th>name</th>
+               
+                                <th> date</th>
+  
+                            <th>&nbsp; action</th>
+                   
+                    </tr>
                 </thead>
                 <tbody>
                 
@@ -44,7 +47,6 @@
 </div>
 
 @endsection
-
 @section('script')
 
 
@@ -53,7 +55,7 @@
     <script>
 
         $(document).ready(function () {
-            var route = '{{route('testimonials.get_data')}}';
+            var route = '{{route('workshops.get_data')}}';
             $('#example1').DataTable({
             
                 processing: true,
@@ -78,11 +80,10 @@
                 ],
                 ajax: route,
                 columns: [
-              
-       {data: "DT_RowIndex", name: 'DT_RowIndex'},
+
+                    {data: "DT_RowIndex", name: 'DT_RowIndex'},
                     {data: "name", name: 'name'},
-                    {data: "occupation", name: 'occupation'},
-                    {data: "content", name: 'content'},
+                    {data: "from_date", name: 'from_date'},
                     {data: "actions", name: "actions"}
                 ],
 
@@ -103,3 +104,4 @@
     </script>
 
 @endsection
+

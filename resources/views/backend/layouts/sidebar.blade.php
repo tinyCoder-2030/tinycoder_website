@@ -22,7 +22,7 @@
         <li >
           <a href="{{route('workshops.index')}}">
             <i class="fa fa-files-o"></i>
-            <span>workshops</span>
+            <span>Workshops</span>
             <span class="pull-right-container">
               <span class="label label-primary pull-right">4</span>
             </span>
@@ -30,17 +30,25 @@
           
         </li>
         <li>
-          <a href="pages/widgets.html">
-            <i class="fa fa-th"></i> <span>Widgets</span>
+          <a href="{{route('users.index')}}">
+           <i class="	fa fa-users"></i> <span>Admins</span>
             <span class="pull-right-container">
-              <small class="label pull-right bg-green">new</small>
+              <small class="label pull-right bg-green">5</small>
             </span>
           </a>
         </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-pie-chart"></i>
-            <span>Charts</span>
+          <li>
+          <a href="{{route('testimonials.index')}}">
+           <i class="fa fa-vcard"></i> <span>Testimonial</span>
+            <span class="pull-right-container">
+              <small class="label pull-right bg-green">5</small>
+            </span>
+          </a>
+        </li>
+        {{-- <li class="treeview">
+          <a href="{{route('testimonial.index')}}">
+            <i class="fa fa-vcard"></i>
+            <span>Testimonial</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -51,7 +59,7 @@
             <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
             <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
           </ul>
-        </li>
+        </li> --}}
         <li class="treeview">
           <a href="#">
             <i class="fa fa-laptop"></i>

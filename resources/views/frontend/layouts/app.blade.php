@@ -31,10 +31,11 @@
 
   <!-- Theme Style -->
   <link rel="stylesheet" href="{{asset('style/css/style.css')}}">
+      <link rel="stylesheet" type="text/css" href="//www.fontstatic.com/f=cocon-next-arabic" />
 
 </head>
 
-<body dir="rtl">
+<body dir="rtl" style="font-family:'cocon-next-arabic';">
 
   <header role="banner">
     <nav class="navbar navbar-expand-lg  bg-dark">

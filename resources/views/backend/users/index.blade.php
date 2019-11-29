@@ -1,17 +1,26 @@
+
+
+
+
 @extends('backend.layouts.app')
 
-@section('title','testimonial'.' | '.'Tiny Coder')
+
 @section('content')
 <div class="container" style="background-color: #ffffff;margin-left: 0px;padding-right:60px;">
     <section class="content">
       <div class="row">
         <div class="col-12">
+        @if ($message = Session::get('success'))
+<div class="alert alert-success">
+  <p>{{ $message }}</p>
+</div>
+@endif
           <div class="card">
             <div class="card-header "style="margin-bottom:20px;">
              
-              <h3 class="card-title" style="display:inline;">testimonials </h3>
-               <a style="display:inline;left:25%px;" href="{{ route('testimonials.create') }}"
-                       class="btn btn-success float-right">create</a>
+              <h3 class="card-title" style="display:inline;">Users Management </h3>
+               <a style="display:inline;left:25%px;" href="{{ route('users.create') }}"
+                       class="btn btn-success float-right">create new user </a>
         
             </div>
             <!-- /.card-header -->
@@ -22,14 +31,14 @@
                 <tr>
                         
             
-                        <th>num</th>
-                        <th>name</th>
-                    <th>occupation</th>
-                    <th>content</th>
-                
-                        <th>actions</th>
-                  
-                             </tr>
+                                <th>num</th>
+                                <th>name</th>
+               
+                                <th> email</th>
+  
+                            <th>&nbsp; action</th>
+                   
+                    </tr>
                 </thead>
                 <tbody>
                 
@@ -44,7 +53,6 @@
 </div>
 
 @endsection
-
 @section('script')
 
 
@@ -53,7 +61,7 @@
     <script>
 
         $(document).ready(function () {
-            var route = '{{route('testimonials.get_data')}}';
+            var route = '{{route('users.get_data')}}';
             $('#example1').DataTable({
             
                 processing: true,
@@ -78,11 +86,10 @@
                 ],
                 ajax: route,
                 columns: [
-              
-       {data: "DT_RowIndex", name: 'DT_RowIndex'},
+
+                    {data: "DT_RowIndex", name: 'DT_RowIndex'},
                     {data: "name", name: 'name'},
-                    {data: "occupation", name: 'occupation'},
-                    {data: "content", name: 'content'},
+                    {data: "email", name: 'email'},
                     {data: "actions", name: "actions"}
                 ],
 
@@ -103,3 +110,4 @@
     </script>
 
 @endsection
+

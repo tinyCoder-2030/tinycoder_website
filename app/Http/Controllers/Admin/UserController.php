@@ -11,6 +11,7 @@ use App\User;
 use Spatie\Permission\Models\Role;
 use DB;
 use Hash;
+use Yajra\DataTables\Facades\DataTables;
 
 
 class UserController extends Controller
@@ -21,13 +22,50 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
-    {
+    { 
         $data = User::orderBy('id','DESC')->paginate(5);
-        return view('users.index',compact('data'))
+        return view('backend.users.index',compact('data'))
             ->with('i', ($request->input('page', 1) - 1) * 5);
     }
 
+    public function getData()
+    {
+        $data = User::role('admin')->get();
+        return DataTables::of($data)
+            ->addIndexColumn()
+            ->addColumn('actions', function ($q)  {
+            
+                $view = "";
+                $edit = "";
+    $show="";
+                $delete = "";
+    
+                    $edit = view('backend.datatable.action-edit')
+                        ->with(['route' => route('users.edit', ['user' => $q->id])])
+                        ->render();
+    
+                    $view .= $edit;
+                
+    
+                    $show = view('backend.datatable.action-view')
+                    ->with(['route' => route('users.show', ['user' => $q->id])])
+                    ->render();
 
+                $view .= $show;
+                    $delete = view('backend.datatable.action-delete')
+                        ->with(['route' => route('users.destroy', ['user' => $q->id])])
+                        ->render();
+               
+    $view.=$delete;
+                      
+               
+    
+                return $view;
+    
+            })
+            ->rawColumns(['actions', 'icon'])
+            ->make();
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -36,7 +74,7 @@ class UserController extends Controller
     public function create()
     {
         $roles = Role::pluck('name','name')->all();
-        return view('users.create',compact('roles'));
+        return view('backend.users.create',compact('roles'));
     }
 
 
@@ -52,7 +90,6 @@ class UserController extends Controller
             'name' => 'required',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|same:confirm-password',
-            'roles' => 'required'
         ]);
 
 
@@ -61,7 +98,7 @@ class UserController extends Controller
 
 
         $user = User::create($input);
-        $user->assignRole($request->input('roles'));
+        $user->assignRole('admin');
 
 
         return redirect()->route('users.index')
@@ -78,7 +115,7 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::find($id);
-        return view('users.show',compact('user'));
+        return view('backend.users.show',compact('user'));
     }
 
 
@@ -95,7 +132,7 @@ class UserController extends Controller
         $userRole = $user->roles->pluck('name','name')->all();
 
 
-        return view('users.edit',compact('user','roles','userRole'));
+        return view('backend.users.edit',compact('user','roles','userRole'));
     }
 
 
@@ -111,8 +148,7 @@ class UserController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'email' => 'required|email|unique:users,email,'.$id,
-            'password' => 'same:confirm-password',
-            'roles' => 'required'
+            'password' => 'same:confirm-password'
         ]);
 
 
@@ -120,7 +156,9 @@ class UserController extends Controller
         if(!empty($input['password'])){ 
             $input['password'] = Hash::make($input['password']);
         }else{
-            $input = array_except($input,array('password'));    
+            $input = $request->except('password');
+
+            // $input = array_except($input,array('password'));    
         }
 
 
@@ -129,7 +167,8 @@ class UserController extends Controller
         DB::table('model_has_roles')->where('model_id',$id)->delete();
 
 
-        $user->assignRole($request->input('roles'));
+        // $user->assignRole($request->input('roles'));
+        $user->assignRole('admin');
 
 
         return redirect()->route('users.index')
