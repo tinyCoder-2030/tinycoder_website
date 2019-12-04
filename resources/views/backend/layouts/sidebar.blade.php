@@ -56,7 +56,7 @@
           <ul class="treeview-menu">
             <li><a href="{{route('aboutus.index')}}"><i class="fa fa-circle-o"></i> about us</a></li>
             <li><a href="pages/charts/morris.html"><i class="fa fa-address-book"></i> contact us</a></li>
-            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> social media</a></li>
+            <li><a href="{{route('social.index')}}"><i class="fa fa-circle-o"></i> social network</a></li>
             {{-- <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li> --}}
           </ul>
         </li>

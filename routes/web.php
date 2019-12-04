@@ -27,6 +27,7 @@ Route::group(['middleware' => ['auth', 'roles'], 'roles' => ['admin']], function
     Route::resource('aboutus','Admin\AboutUsController');
     Route::resource('admins','Admin\AdminController');
     Route::resource('social','Admin\SocialNetworkController');
+    Route::get('get-social-data', ['uses' => 'Admin\SocialNetworkController@getData', 'as' => 'social.get_data']);
     Route::resource('testimonials','Admin\TestimonialController');
     Route::get('get-testimonials-data', ['uses' => 'Admin\TestimonialController@getData', 'as' => 'testimonials.get_data']);
 

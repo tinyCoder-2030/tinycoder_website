@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\SocialNetwork;
 use Illuminate\Http\Request;
-
+use DataTables;
 class SocialNetworkController extends Controller
 {
     /**
@@ -15,9 +15,34 @@ class SocialNetworkController extends Controller
      */
     public function index()
     {
-        //
+        return view('backend.social.index');
     }
-
+    public function getData()
+    {
+        $data = SocialNetwork::latest()->get();
+        return DataTables::of($data)
+        ->addIndexColumn()
+        ->addColumn('actions', function ($q)  {
+        
+            $view = "";
+            $edit = "";
+    $show="";
+            $delete = "";
+    
+                $edit = view('backend.datatable.action-edit')
+                    ->with(['route' => route('social.edit',['social' => $q->id])])
+                    ->render();
+    
+                $view .= $edit;
+                  
+           
+    
+            return $view;
+    
+        })
+        ->rawColumns(['actions', 'icon'])
+        ->make();
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -58,7 +83,8 @@ class SocialNetworkController extends Controller
      */
     public function edit(SocialNetwork $socialNetwork)
     {
-        //
+      $socialNetwork=SocialNetwork::find(request('social'))->first();  
+        return view('backend.social.edit',compact('socialNetwork'));
     }
 
     /**
@@ -70,7 +96,7 @@ class SocialNetworkController extends Controller
      */
     public function update(Request $request, SocialNetwork $socialNetwork)
     {
-        //
+        $testimonial->update($request->all());
     }
 
     /**
