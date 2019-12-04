@@ -31,7 +31,8 @@
     @endif
 
 
-    <form action="{{ route('workshops.update',$workshop->id) }}" method="POST" enctype="multipart/form-data">
+    {{-- <form action="{{ route('workshops.update',$workshop->id) }}" method="POST" enctype="multipart/form-data"> --}}
+        {!! Form::model($workshop, ['method' => 'PUT', 'route' => ['workshops.update',$workshop->id], 'files' => true,]) !!}
         @csrf
         @method('PUT')
 
@@ -69,9 +70,13 @@
                     {!! Form::label('workshop_image',  'workshop image', ['class' => 'control-label']) !!}
                     {!! Form::file('workshop_image',  ['class' => 'form-control', 'accept' => 'image/jpeg,image/gif,image/png']) !!}
               @if( $workshop->image())
-              <img src="{{$workshop->image()}}">
+              <img height="400px" src="{{$workshop->image()}}">
               @endif
 
+                </div>
+                  <div class="col-12  form-group">
+                    {!! Form::label('price',  'price', ['class' => 'control-label']) !!}
+                    {!! Form::number('price', old('price'), ['class' => 'form-control']) !!}
                 </div>
                 <div class="col-12">
                     <div class="form-group">
@@ -86,7 +91,7 @@
             </div>
 
 
-    </form>
+    {!! Form::close() !!}
 
 
 </div>

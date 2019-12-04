@@ -5,7 +5,7 @@
 
 @section('title','workshop'.' | '.'Tiny Coder')
 @section('content')
-<div class="container" style="background-color: #ffffff;margin-left: 0px;padding-right:60px;">
+<div class="container" style="background-color: #ffffff;widht:100%;margin:0px;">
     <section class="content">
       <div class="row">
         <div class="col-12">

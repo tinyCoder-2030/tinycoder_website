@@ -26,6 +26,23 @@
     
   </footer> --}}
   <footer class="app-footer">
+  <div class="container justify-content-center">
+    <div class="row"style=" display: flex;
+  align-items: center;">
+    <div class="col-12" style=" display: flex;
+  align-items: center;
+  justify-content: center;">
+        <a href="http://scripteden.com/download/eden-ui/" target="_blank" class="btn-social btn-instagram"><i class="fa fa-instagram"></i></a>
+        <a href="http://scripteden.com/download/eden-ui/" target="_blank" class="btn-social btn-twitter"><i class="fa fa-twitter"></i></a>
+        <a href="http://scripteden.com/download/eden-ui/" target="_blank" class="btn-social btn-email"><i class="fa fa-whatsapp"></i></a>
+        <a href="http://scripteden.com/download/eden-ui/" target="_blank" class="btn-social btn-email"style="background-color:yellow;"><i class="fa fa-snapchat-ghost"></i></a>
+        <a href="http://scripteden.com/download/eden-ui/" target="_blank" class="btn-social btn-youtube"><i class="fa fa-youtube"></i></a>
+        <a href="http://scripteden.com/download/eden-ui/" target="_blank" class="btn-social btn-email"><i class="fa fa-envelope"></i></a>
+    </div>
+
+
+</div>
+</div>
         <div class="d-block w-100 text-center">
           &copy;
              جميع الحقوق محفوظه لدى

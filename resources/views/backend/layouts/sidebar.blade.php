@@ -45,21 +45,21 @@
             </span>
           </a>
         </li>
-        {{-- <li class="treeview">
-          <a href="{{route('testimonial.index')}}">
-            <i class="fa fa-vcard"></i>
-            <span>Testimonial</span>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-cogs"></i>
+            <span>page Management</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
-            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-            <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
+            <li><a href="{{route('aboutus.index')}}"><i class="fa fa-circle-o"></i> about us</a></li>
+            <li><a href="pages/charts/morris.html"><i class="fa fa-address-book"></i> contact us</a></li>
+            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> social media</a></li>
+            {{-- <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li> --}}
           </ul>
-        </li> --}}
+        </li>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-laptop"></i>

@@ -18,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display:400,400i|Roboto+Mono&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="{{asset('style/css/animate.css')}}">
+  <link rel="stylesheet" href="{{asset('style/css/social.css')}}">
   <link rel="stylesheet" href="{{asset('style/css/owl.carousel.min.css')}}">
   <link rel="stylesheet" href="{{asset('style/css/jquery.fancybox.min.css')}}">
 
@@ -28,7 +29,8 @@
   {{-- <link rel="stylesheet" href="{{asset('style/css/aos.css')}}"> --}}
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
-
+    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css">
   <!-- Theme Style -->
   <link rel="stylesheet" href="{{asset('style/css/style.css')}}">
       <link rel="stylesheet" type="text/css" href="//www.fontstatic.com/f=cocon-next-arabic" />

@@ -16,7 +16,7 @@ class Workshop extends Model implements HasMedia
      * @var array
      */
     protected $fillable = [
-        'name', 'from_time', 'to_date','detail','from_age','to_age','from_date','girle','boy'
+        'name', 'from_time', 'to_date','detail','from_age','to_age','from_date','girle','boy','price'
     ];
 
     public function image(){

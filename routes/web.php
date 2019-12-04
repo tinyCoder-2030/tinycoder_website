@@ -24,7 +24,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => ['auth', 'roles'], 'roles' => ['admin']], function() {
     Route::resource('roles','Admin\RoleController');
+    Route::resource('aboutus','Admin\AboutUsController');
     Route::resource('admins','Admin\AdminController');
+    Route::resource('social','Admin\SocialNetworkController');
     Route::resource('testimonials','Admin\TestimonialController');
     Route::get('get-testimonials-data', ['uses' => 'Admin\TestimonialController@getData', 'as' => 'testimonials.get_data']);
 

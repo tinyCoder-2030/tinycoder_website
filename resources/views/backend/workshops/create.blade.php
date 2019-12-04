@@ -70,6 +70,10 @@
               
 
                 </div>
+                 <div class="col-12  form-group">
+                    {!! Form::label('price',  'price', ['class' => 'control-label']) !!}
+                    {!! Form::number('price', old('price'), ['class' => 'form-control']) !!}
+                </div>
             <div class="col-12">
                 <div class="form-group">
                     <strong>Detail:</strong>

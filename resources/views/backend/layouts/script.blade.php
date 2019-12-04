@@ -55,6 +55,60 @@
             height: 300,
         }
         tinymce.init(editor_config);
+        $.widget.bridge('uibutton', $.ui.button);
+  var editor_config = {
+            selector: '#goal',
+            directionality: document.dir,
+            path_absolute: "/",
+            menubar: 'edit insert view format table',
+            plugins: [
+                "advlist autolink lists link image charmap preview hr anchor pagebreak",
+                "searchreplace wordcount visualblocks visualchars code fullscreen",
+                "insertdatetime media save table contextmenu directionality",
+                "paste textcolor colorpicker textpattern"
+            ],
+            toolbar: "insertfile undo redo | formatselect styleselect | bold italic strikethrough forecolor backcolor permanentpen formatpainter | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media | fullscreen code",
+            relative_urls: false,
+            language: document.documentElement.lang,
+            height: 300,
+        }
+        tinymce.init(editor_config);
+        $.widget.bridge('uibutton', $.ui.button);
+  var editor_config = {
+            selector: '#vision',
+            directionality: document.dir,
+            path_absolute: "/",
+            menubar: 'edit insert view format table',
+            plugins: [
+                "advlist autolink lists link image charmap preview hr anchor pagebreak",
+                "searchreplace wordcount visualblocks visualchars code fullscreen",
+                "insertdatetime media save table contextmenu directionality",
+                "paste textcolor colorpicker textpattern"
+            ],
+            toolbar: "insertfile undo redo | formatselect styleselect | bold italic strikethrough forecolor backcolor permanentpen formatpainter | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media | fullscreen code",
+            relative_urls: false,
+            language: document.documentElement.lang,
+            height: 300,
+        }
+        tinymce.init(editor_config);
+        $.widget.bridge('uibutton', $.ui.button);
+  var editor_config = {
+            selector: '#message',
+            directionality: document.dir,
+            path_absolute: "/",
+            menubar: 'edit insert view format table',
+            plugins: [
+                "advlist autolink lists link image charmap preview hr anchor pagebreak",
+                "searchreplace wordcount visualblocks visualchars code fullscreen",
+                "insertdatetime media save table contextmenu directionality",
+                "paste textcolor colorpicker textpattern"
+            ],
+            toolbar: "insertfile undo redo | formatselect styleselect | bold italic strikethrough forecolor backcolor permanentpen formatpainter | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media | fullscreen code",
+            relative_urls: false,
+            language: document.documentElement.lang,
+            height: 300,
+        }
+        tinymce.init(editor_config);
  $(document).ready(function() {
        tinymce.init({
         selector : "textarea",
