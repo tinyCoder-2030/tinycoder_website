@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Workshop;
 use App\PhotoGallery;
 use App\Testimonial;
+use App\AboutUs;
 class HomeController extends Controller
 {
     public function index(){
@@ -16,7 +17,9 @@ class HomeController extends Controller
     } 
     
     public function about(){
-        return view('aboutUs');
+        $testimonials=Testimonial::all();
+        $aboutus=AboutUs::find(1);
+        return view('aboutUs',compact('aboutus','testimonials'));
     }
     public function photo(){
         $photos = PhotoGallery::latest()->get();
