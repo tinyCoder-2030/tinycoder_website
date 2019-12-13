@@ -6,8 +6,8 @@
     <div class="container">
       <div class="row slider-text align-items-center justify-content-center text-center">
         <div class="col-lg-12 col-sm-12">
-          <h1 class="mb-4" data-aos="fade-up" data-aos-delay="">Contact Us</h1>
-          <p class="custom-breadcrumbs" data-aos="fade-up" data-aos-delay="100"><a href="{{ route('index') }}">Home</a> <span class="mx-3">/</span> Contact</p>
+          <h1 class="mb-4" data-aos="fade-up" data-aos-delay="">تواصل معنا </h1>
+          <p class="custom-breadcrumbs" data-aos="fade-up" data-aos-delay="100"><a href="{{ route('index') }}">الصفحة الرئيسية</a> <span class="mx-3">\</span> تواصل معنا</p>
         </div>
       </div>
     </div>

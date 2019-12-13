@@ -37,9 +37,8 @@
         <a href="http://scripteden.com/download/eden-ui/" target="_blank" class="btn-social btn-email"><i class="fa fa-whatsapp"></i></a>
         <a href="http://scripteden.com/download/eden-ui/" target="_blank" class="btn-social btn-email"style="background-color:yellow;"><i class="fa fa-snapchat-ghost"></i></a>
         <a href="http://scripteden.com/download/eden-ui/" target="_blank" class="btn-social btn-youtube"><i class="fa fa-youtube"></i></a>
-        <a href="http://scripteden.com/download/eden-ui/" target="_blank" class="btn-social btn-email"><i class="fa fa-envelope"></i></a>
-   <a href="mailto:email@echoecho.com">
-Send Email</a>
+        <a href="mailto:tinycoders2019@gmail.com" target="_blank" class="btn-social btn-email"><i class="fa fa-envelope"></i></a>
+ 
     </div>
 
 

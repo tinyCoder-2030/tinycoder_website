@@ -34,7 +34,7 @@
   <!-- Theme Style -->
   <link rel="stylesheet" href="{{asset('style/css/style.css')}}">
       <link rel="stylesheet" type="text/css" href="//www.fontstatic.com/f=cocon-next-arabic" />
-
+   @yield('style')
 </head>
 
 <body dir="rtl" style="font-family:'cocon-next-arabic';">
@@ -77,6 +77,12 @@
                 <li class="nav-item">
               <a class="nav-link" href="portfolio.html">حجز موعد</a>
             </li>
+                <li class="nav-item">
+              <a class="nav-link" href="{{ route('photo') }}">معرض الصور</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio.html"> المدونة</a>
+            </li>
             </li>
               @guest
               <li class="nav-item">
@@ -108,9 +114,9 @@
                 <li class="nav-item">
               <a class="nav-link" href="{{ route('about-us') }}">من نحن</a>
             </li>
-            <li class="nav-item">
+            {{-- <li class="nav-item">
               <a class="nav-link" href="{{ route('contact-us') }}">تواصل معنا</a>
-            </li>
+            </li> --}}
           </ul>
 
           <div class="navbar-nav ml-auto">
