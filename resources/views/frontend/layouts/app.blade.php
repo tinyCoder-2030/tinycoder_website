@@ -14,12 +14,12 @@
   <meta name="author" content="Free-Template.co" />
 
   <link rel="shortcut icon" href="ftco-32x32.png">
-
+ 
   <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display:400,400i|Roboto+Mono&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="{{asset('style/css/animate.css')}}">
+  {{-- <link rel="stylesheet" href="{{asset('style/css/animate.css')}}"> --}}
   <link rel="stylesheet" href="{{asset('style/css/social.css')}}">
-  <link rel="stylesheet" href="{{asset('style/css/owl.carousel.min.css')}}">
+  {{-- <link rel="stylesheet" href="{{asset('style/css/owl.carousel.min.css')}}"> --}}
   <link rel="stylesheet" href="{{asset('style/css/jquery.fancybox.min.css')}}">
 
 
@@ -53,7 +53,7 @@
         <div class="collapse navbar-collapse" id="navbarsExample05">
           <ul class="navbar-nav pl-md-5 ml-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="{{ route('index') }}">الرئيسية</a>
+              <a class="nav-link" href="{{ route('index') }}">الرئيسية</a>
             </li>
         
             {{-- <li class="nav-item dropdown">
@@ -69,7 +69,7 @@
                 @endguest
             </li> --}}
             <li class="nav-item">
-              <a class="nav-link" href="portfolio.html">الدورات</a>
+              <a class="nav-link" href="{{ route('userWorkshop.index') }}">الدورات</a>
             </li>
               <li class="nav-item">
               <a class="nav-link" href="https://salla.sa/tiny_coders">المتجر</a>
@@ -114,9 +114,9 @@
                 <li class="nav-item">
               <a class="nav-link" href="{{ route('about-us') }}">من نحن</a>
             </li>
-            {{-- <li class="nav-item">
-              <a class="nav-link" href="{{ route('contact-us') }}">تواصل معنا</a>
-            </li> --}}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('contact-us.index') }}">تواصل معنا</a>
+            </li>
           </ul>
 
           <div class="navbar-nav ml-auto">

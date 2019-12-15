@@ -32,13 +32,27 @@
     <div class="col-12" style=" display: flex;
   align-items: center;
   justify-content: center;">
-        <a href="http://scripteden.com/download/eden-ui/" target="_blank" class="btn-social btn-instagram"><i class="fa fa-instagram"></i></a>
-        <a href="http://scripteden.com/download/eden-ui/" target="_blank" class="btn-social btn-twitter"><i class="fa fa-twitter"></i></a>
-        <a href="http://scripteden.com/download/eden-ui/" target="_blank" class="btn-social btn-email"><i class="fa fa-whatsapp"></i></a>
-        <a href="http://scripteden.com/download/eden-ui/" target="_blank" class="btn-social btn-email"style="background-color:yellow;"><i class="fa fa-snapchat-ghost"></i></a>
-        <a href="http://scripteden.com/download/eden-ui/" target="_blank" class="btn-social btn-youtube"><i class="fa fa-youtube"></i></a>
-        <a href="mailto:tinycoders2019@gmail.com" target="_blank" class="btn-social btn-email"><i class="fa fa-envelope"></i></a>
- 
+  @foreach ($socials as $social)
+
+         @if($social->name=='instagram'&&$social->status==1)
+        <a href="{{$social->link}}"target="_blank" class="btn-social btn-instagram"><i class="fa fa-instagram"></i></a>
+         @endif
+         @if($social->name=='twitter'&&$social->status==1)
+        <a href="{{$social->link}}" target="_blank" class="btn-social btn-twitter"><i class="fa fa-twitter"></i></a>
+          @endif
+                   @if($social->name=='whatsapp'&&$social->status==1)
+        <a href="{{$social->link}}" target="_blank" class="btn-social btn-email"><i class="fa fa-whatsapp"></i></a>
+          @endif
+          @if($social->name=='snapchat'&&$social->status==1)
+        <a href="{{$social->link}}" target="_blank" class="btn-social btn-email"style="background-color:yellow;"><i class="fa fa-snapchat-ghost"></i></a>
+          @endif
+             @if($social->name=='youtube'&&$social->status==1)
+        <a href="{{$social->link}}" target="_blank" class="btn-social btn-youtube"><i class="fa fa-youtube"></i></a>
+        @endif
+             @if($social->name=='email'&&$social->status==1)
+        <a href="mailto:{{$social->link}}" target="_blank" class="btn-social btn-email"><i class="fa fa-envelope"></i></a>
+  @endif
+  @endforeach
     </div>
 
 

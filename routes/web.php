@@ -14,7 +14,8 @@
 Route::get('/dashbord', function () {
     return view('backend.index');
 })->name('dashbord');
-Route::get('/contact-us', 'frontend\ContactUS@index')->name('contact-us');
+Route::resource('contact-us', 'frontend\ContactController');
+Route::resource('userWorkshop', 'frontend\WorkshopController');
 Route::get('/about-us', 'frontend\HomeController@about')->name('about-us');
 Route::get('/', 'frontend\HomeController@index')->name('index');
 Route::get('/photo', 'frontend\HomeController@photo')->name('photo');

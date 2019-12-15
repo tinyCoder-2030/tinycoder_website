@@ -7,8 +7,8 @@
     <div class="container">
       <div class="row slider-text align-items-center justify-content-center text-center">
         <div class="col-lg-12 col-sm-12">
-          <h1 class="mb-4" data-aos="fade-up" data-aos-delay=""> معرض الصور </h1>
-          <p class="custom-breadcrumbs" data-aos="fade-up" data-aos-delay="100"><a href="{{ route('index') }}">الصفحة الرئيسية</a> <span class="mx-3">\</span> تواصل معنا</p>
+          <h1 class="mb-4" data-aos="fade-up" data-aos-delay=""style="font-family:'cocon-next-arabic';"> معرض الصور </h1>
+          <p class="custom-breadcrumbs" data-aos="fade-up" data-aos-delay="100"><a href="{{ route('index') }}" style="font-family:'cocon-next-arabic';">الصفحة الرئيسية</a> <span class="mx-3"style="font-family:'cocon-next-arabic';">\</span> تواصل معنا</p>
         </div>
       </div>
     </div>

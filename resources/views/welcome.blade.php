@@ -7,8 +7,8 @@
     <div class="container">
       <div class="row slider-text align-items-center justify-content-center">
         <div class="col-lg-12 text-center col-sm-12">
-          <p data-aos="fade-up" data-aos="fade-up" data-aos-delay="">المبرمجون الصغار</p>
-          <p class="mb-4" data-aos="fade-up" data-aos-delay="100"style="font-size:30px;">هدفنا نشر المفاهيم البرمجية والتفكير المنطقي بين أطفالنا</p>
+          <p data-aos="fade-up" data-aos="fade-up" data-aos-delay="" style="font-family:'cocon-next-arabic';">المبرمجون الصغار</p>
+          <p class="mb-4" data-aos="fade-up" data-aos-delay="100"style="font-size:30px;font-family:'cocon-next-arabic';">هدفنا نشر المفاهيم البرمجية والتفكير المنطقي بين أطفالنا</p>
           <div class="btn-play-wrap mx-auto" data-aos="fade-up" data-aos-delay="200">
             <a href="https://youtu.be/ckzm98yXB5E" data-fancybox data-ratio="2"
                 class="btn-play"><span class="ion ion-ios-play"></span></a>
@@ -19,47 +19,57 @@
     </div>
   </div>
 
-  
 
-  
 
-  <div class="section portfolio-section">
-    <div class="container">
-      <div class="row mb-5 justify-content-center" data-aos="fade-up">
-        <div class="col-md-8 text-center">
-          <h2 class="mb-4 section-title">Latest Work</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis accusamus perferendis
-            libero accusantium nisi.</p>
-          <p><a href="#">View All Portfolio</a></p>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="row mb-5 no-gutters">
-      @foreach ($workshops as $workshop)
-          
-     
-        <div class="col-sm-6 col-md-6 col-lg-6" data-aos="fade" data-aos-delay="100">
-          <a href="portfolio-single.html" class="work-thumb">
-            <div class="work-text">
-              <h2>{{$workshop->name}}</h2>
-              <p>{{$workshop->from_date}}</p>
-            </div>
-            @if($workshop->image())
-            <img src="{{$workshop->image()}}" style="height:400px;width:100%;"alt="Image" class="img-fluid">
+
+	<div class="popular page_section" dir="rtl">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+						<h1 style="font-family:'cocon-next-arabic';">ورش العمل والدورات</h1>
+					</div>
+				</div>
+			</div>
+
+			<div class="row course_boxes">
+				  @foreach ($workshops as $workshop)
+				<!-- Popular Course Item -->
+				<div class="col-lg-4 course_box">
+					<div class="card">
+           @if($workshop->image())
+            
+						<img class="card-img-top" style="height:200px;width:100%;" src="{{$workshop->image()}}" >
             @endif
-          </a>
-        </div>
+						<div class="card-body text-center">
+							<div class="card-title"><a href="courses.html" style="font-family:'cocon-next-arabic'">{{$workshop->name}}</a></div>
+							<div class="card-text" style="font-family:'cocon-next-arabic'">{{$workshop->from_date}}</div>
+              @if($workshop->price==null ||$workshop->price=='')
+              <div class="course_price d-flex flex-column align-items-center justify-content-center" style="margin-right: auto;height: 40px;font-family:'cocon-next-arabic'"><span>مجانية</span></div>
+					@else
+           <div class="course_price d-flex flex-column align-items-center justify-content-center" style="margin-right: auto;height: 40px;"><span>SR {{$workshop->price}}</span></div>
+          @endif
+          	</div>
+            		<div class="price_box d-flex flex-row align-items-center"style=" padding-right: 35px;">
+            	<div class="buttons_container" style="width:100%;background-color:black;color:white;">
+            <div class="button  text-center "style="width:100%;color:white;"><a href="#" style="width:100%;color:white;font-family:'cocon-next-arabic'">التسجيل</a></div>
+            </div>
+							{{-- <div class="course_author_image">
+								<img src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh">
+							</div>
+							<div class="course_author_name">Michael Smith, <span>Author</span></div> --}}
+						
+						</div>
+						
+							
+					
+					</div>
+				</div>
  @endforeach
-       
-      
-      <div class="row mt-5">
-        <div class="col-12 text-center">
-          <p><a href="portfolio.html" class="btn btn-outline-white px-4 py-3">More Portfolio</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
+			
+		</div>		
+	</div>
+
 
   <div class="section">
     <div class="container">
@@ -84,72 +94,52 @@
     </div>
   </div>
 
-  <div class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3 mb-4">
-          <div class="service" data-aos="fade-up" data-aos-delay="">
-            <span class="icon icon-magnet mb-4 d-block"></span>
-            <h3>Designing</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias id volume amet.</p>
-          </div>
-        </div>
-        <div class="col-lg-3 mb-4">
-          <div class="service" data-aos="fade-up" data-aos-delay="100">
-            <span class="icon icon-screen-desktop mb-4 d-block"></span>
-            <h3>Branding Identity</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias id volume amet.</p>
-          </div>
-        </div>
-        <div class="col-lg-3 mb-4">
-          <div class="service" data-aos="fade-up" data-aos-delay="200">
-            <span class="icon icon-screen-smartphone mb-4 d-block"></span>
-            <h3>Mobile Application</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias id volume amet.</p>
-          </div>
-        </div>
-        <div class="col-lg-3 mb-4">
-          <div class="service" data-aos="fade-up" data-aos-delay="300">
-            <span class="icon icon-magnifier mb-4 d-block"></span>
-            <h3>Search Engine</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias id volume amet.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="section  block-11" dir="ltr">
-    <div class="container">
-      <div class="row justify-content-center mb-5">
-        <div class="col-md-8 text-center">
-          <h2 class="mb-4 section-title" >اعضاء الفريق</h2>
+<div class="testimonials page_section" dir="ltr"  style="font-family:'cocon-next-arabic';">
+    <div class="testimonials_background_container prlx_parent">
+        <div class="testimonials_background prlx" style="background-image:url(style/images/testimonial.jpg)">
         </div>
-      </div>
-      <div class="nonloop-block-11 owl-carousel" style="height:90%;">
-      @foreach($testimonials as $testimonial)
-        <div class="item" style="  border-radius:25px;border-right: 2px solid #fa983a;border-left: 2px solid #fa983a;border-top: 2px solid #b6432e;border-bottom: 2px solid #b6432e;">
-          <div class="block-33" >
-            <div class="vcard d-flex mb-3" >
-              <div class="image align-self-center"><img src="{{$testimonial->image()}}"alt="Person here"></div>
-              <div class="name-text align-self-center">
-                <h2 class="heading">{{$testimonial->name}}</h2>
-                <span class="meta"> {{ $testimonial->occupation }}</span>
-              </div>
-            </div>
-            <div class="text" style="direction:rtl;text-alignment:center;">
-
-                <p style="direction:rtl;"> {!! $testimonial->content !!}</p>
-             
-            </div>
-          </div>
-        </div>
-@endforeach
-       
-      </div>
     </div>
-  </div>
-  <!-- END .block-4 -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="section_title text-center">
+                    <h1  style="font-family:'cocon-next-arabic';">اعضاء الفريق</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+
+                <div class="testimonials_slider_container">
+
+                    <!-- Testimonials Slider -->
+                    <div class="owl-carousel owl-theme testimonials_slider" >
+                        @foreach($testimonials as $testimonial)
+                        <!-- Testimonials Item -->
+                        <div class="owl-item" style="font-family:'cocon-next-arabic';">
+                            <div class="testimonials_item text-center">
+                                <div class="quote">“</div>
+                                <p class="testimonials_text"  style="font-family:'cocon-next-arabic';">{!! $testimonial->content !!}</p>
+                                <div class="testimonial_user">
+                                    <div class="testimonial_image mx-auto">
+                                        <img src="{{$testimonial->image()}}" alt="">
+                                    </div>
+                                    <div class="testimonial_name"  style="font-family:'cocon-next-arabic';">{{$testimonial->name}}</div>
+                                    <div class="testimonial_title"  style="font-family:'cocon-next-arabic';">{{ $testimonial->occupation }}</div>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</div>
+    </div>
+</div>
+
   </div>
 
   <div class="bg-primary py-5">
@@ -166,4 +156,57 @@
     </div>
   </div>
 
+   @endsection
+   @section('style')
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Course Project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{-- <link rel="stylesheet" type="text/css" href="{{('course/styles/bootstrap4/bootstrap.min.css')}}"> --}}
+<link href="{{('course/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet')}}" type="text/css">
+<link rel="stylesheet" type="text/css" href="{{('course/plugins/OwlCarousel2-2.2.1/owl.carousel.css')}}">
+<link rel="stylesheet" type="text/css" href="{{('course/plugins/OwlCarousel2-2.2.1/owl.theme.default.css')}}">
+<link rel="stylesheet" type="text/css" href="{{('course/plugins/OwlCarousel2-2.2.1/animate.css')}}">
+<link rel="stylesheet" type="text/css" href="{{('course/styles/main_styles.css')}}">
+<link rel="stylesheet" type="text/css" href="{{('course/styles/responsive.css')}}">
+<link rel="stylesheet" type="text/css" href="//www.fontstatic.com/f=cocon-next-arabic" />
+<style>
+.owl-carousel .owl-dots.disabled,
+.owl-carousel .owl-nav.disabled {
+    display: none
+}
+.owl-carousel .owl-dot,
+.owl-carousel .owl-nav .owl-next,
+.owl-carousel .owl-nav .owl-prev {
+    cursor: pointer;
+    cursor: hand;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel button.owl-dot {
+    background: 0 0;
+    color: inherit;
+    border: none;
+    padding: 0 !important;
+    font: inherit
+}
+</style>
+   @endsection
+   @section('script')
+<script src="{{('course/js/jquery-3.2.1.min.js')}}"></script>
+<script src="{{('course/styles/bootstrap4/popper.js')}}"></script>
+<script src="{{('course/styles/bootstrap4/bootstrap.min.js')}}"></script>
+<script src="{{('course/plugins/greensock/TweenMax.min.js')}}"></script>
+<script src="{{('course/plugins/greensock/TimelineMax.min.js')}}"></script>
+<script src="{{('course/plugins/scrollmagic/ScrollMagic.min.js')}}"></script>
+<script src="{{('course/plugins/greensock/animation.gsap.min.js')}}"></script>
+<script src="{{('course/plugins/greensock/ScrollToPlugin.min.js')}}"></script>
+<script src="{{('course/plugins/OwlCarousel2-2.2.1/owl.carousel.js')}}"></script>
+<script src="{{('course/plugins/scrollTo/jquery.scrollTo.min.js')}}"></script>
+<script src="{{('course/plugins/easing/easing.js')}}"></script>
+<script src="{{('course/js/custom.js')}}"></script>
    @endsection
