@@ -27,7 +27,10 @@
                             <th>title</th>
                             <td> {{ $blog->title }}</td>
                         </tr>
-                       
+                          <tr>
+                            <th>abstract</th>
+                            <td dir="rtl" >{!! $blog->abstract !!} </td>
+                        </tr>
                         <tr>
                             <th>content</th>
                             <td dir="rtl" >{!! $blog->content !!} </td>

@@ -9,7 +9,13 @@
       <div class="row slider-text align-items-center justify-content-center">
         <div class="col-lg-12 text-center col-sm-12">
          <div class="card-body login" style="opacity:0.9;margin-top:50px;">
-                     <form method="POST" action="{{ route('login') }}">
+          @if(session()->has('alert'))
+                        <div class="alert alert-dismissable alert-success fade show">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            {{session('alert')}}
+                        </div>
+                    @endif
+                     <form method="POST" action="{{ route('contact-us.store') }}">
                         @csrf
 
                         <div class="form-group row">

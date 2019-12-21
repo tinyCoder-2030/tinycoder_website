@@ -31,7 +31,7 @@
     @endif
 
 
-    {{-- <form action="{{ route('workshops.update',$workshop->id) }}" method="POST" enctype="multipart/form-data"> --}}
+    
         {!! Form::model($workshop, ['method' => 'PUT', 'route' => ['workshops.update',$workshop->id], 'files' => true,]) !!}
         @csrf
         @method('PUT')

@@ -164,7 +164,7 @@
         <div class="row">
             <div class="col">
                 <div class="section_title text-center">
-                    <h1>المدونة</h1>
+                    <h1 style="font-family:'cocon-next-arabic';">المدونة</h1>
                 </div>
             </div>
         </div>
@@ -191,17 +191,17 @@
 
                             <div class="col-lg-6 order-lg-2 order-3">
                                 <div class="event_content">
-                                    <div class="event_name"><a class="trans_200" href="#">{{$blog->user->name}}</a>
+                                    <div class="event_name"style="color:#b6432e"><a class="trans_200" href="#"></a>{{$blog->user->name}}
                                     </div>
                                     <div class="event_location">{{$blog->title}}</div>
-                                    {{-- <span class="effect">عرض المزيد من التفاصيل</span> --}}
-                                    <div class="buttons">
+                                    <p dir="rtl"style="text-align:right;font-family:'cocon-next-arabic';">{{$blog->abstract}}</p>
+                                    <div class="buttons ">
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col">
-                                                    <div class="buttons_container">
+                                                    <div class="buttons_container mt-5 ">
                                                         <div class="button button_color_1 text-center trans_200"
-                                                            style="background:#fa983a"><a href="{{route('allBlog.show',$blog->id)}}">Read More</a></div>
+                                                            style="background:#fa983a"><a href="{{route('allBlog.show',$blog->id)}}">التفاصيل</a></div>
 
                                                     </div>
                                                 </div>

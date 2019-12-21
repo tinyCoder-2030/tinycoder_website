@@ -52,10 +52,10 @@
    
         <div class="collapse navbar-collapse" id="navbarsExample05">
           <ul class="navbar-nav pl-md-5 ml-auto">
-            <li class="nav-item">
+            {{-- <li class="nav-item">
               <a class="nav-link" href="{{ route('index') }}">الرئيسية</a>
             </li>
-        
+         --}}
             {{-- <li class="nav-item dropdown">
              @guest
               <a class="nav-link dropdown-toggle" id="dropdown04" data-toggle="dropdown"
@@ -74,9 +74,9 @@
               <li class="nav-item">
               <a class="nav-link" href="https://salla.sa/tiny_coders">المتجر</a>
             </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
               <a class="nav-link" href="portfolio.html">حجز موعد</a>
-            </li>
+            </li> --}}
                 <li class="nav-item">
               <a class="nav-link" href="{{ route('photo') }}">معرض الصور</a>
             </li>
@@ -136,7 +136,7 @@
      </section>
   <section >
    @yield('footer')
-@extends('frontend.layouts.footer')
+{{-- @extends('frontend.layouts.footer') --}}
      </section>
   <!-- END footer -->
 

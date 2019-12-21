@@ -90,6 +90,7 @@ return $show;
     {
         request()->validate([
             'title' => 'required',
+            'abstract' => 'required',
             'content' => 'required',
            
             ]);
@@ -144,6 +145,7 @@ return $show;
     {
         request()->validate([
             'title' => 'required',
+            'abstract' => 'required',
             'content' => 'required',
            
             ]);

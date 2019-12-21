@@ -55,17 +55,16 @@
   	                                </div>
   	                                <div class="news_post_title_container">
   	                                    <div class="news_post_title">
-  	                                        <a href="news_post.html">{{$blog->title}}</a>
+  	                                        <a style="color:#000000;">{{$blog->title}}</a>
   	                                    </div>
-  	                                    <div class="news_post_meta">
-  	                                        <span class="news_post_author"><a href="#">{{$blog->user->name}}</a></span>
+  	                                    <div class="news_post_meta"style="color:#b6432e;margin-right:5px;"><a class="trans_200" href="#"></a>{{$blog->user->name}}
 
 
   	                                    </div>
   	                                </div>
   	                            </div>
-  	                            <div class="news_post_text">
-  	                                <p>{!!$blog->content!!}</p>
+  	                            <div class="news_post_text" >
+  	                                <strong style="font-family:'cocon-next-arabic';">{!!$blog->content!!}</strong>
   	                            </div>
 
   	                        </div>

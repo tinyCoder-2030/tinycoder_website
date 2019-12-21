@@ -45,27 +45,26 @@
 							</div>
 							<div class="news_post_top d-flex flex-column flex-sm-row">
 								<div class="news_post_date_container">
-									<div class="news_post_date d-flex flex-column align-items-center justify-content-center">
-										<div>{{$blog->created_at->day}}</div>
-										<div>{{$blog->created_at->month}}</div>
-                                        	<div>{{$blog->created_at->year}}</div>
+									<div class="news_post_date d-flex flex-column align-items-center text-aligin-center justify-content-center">
+										<div><strong>{{$blog->created_at->day}} <strong></div>
+										<div><strong>{{$blog->created_at->month}}</strong></div>
+                                      	<div><strong>{{$blog->created_at->year}}</strong></div>
 									</div>
 								</div>
 								<div class="news_post_title_container">
 									<div class="news_post_title">
-										<p>{{$blog->title}}</p>
+										<p style="color:#000000;font-family:'cocon-next-arabic';" >{{$blog->title}}</p>
 									</div>
-									<div class="news_post_meta">
-										<span class="news_post_author"><a href="#">{{$blog->user->name}}</a></span>
+									<div class="news_post_meta" style="color:#b6432e;margin-right:5px;"><a class="trans_200" href="#"></a>{{$blog->user->name}}
 										
 									</div>
 								</div>
 							</div>
-							<div class="news_post_text">
-								{{-- <p></p> --}}
+							<div class="news_post_text"dir="rtl"style="text-align:right;">
+							<span  style="color:#000000;">{{$blog->abstract}}</span>
 							</div>
 							<div class="news_post_button text-center trans_200">
-								<a href="{{route('allBlog.show',$blog->id)}}" >Read More</a>
+								<a href="{{route('allBlog.show',$blog->id)}}" >التفاصيل</a>
 							</div>
 						</div>
 @endforeach

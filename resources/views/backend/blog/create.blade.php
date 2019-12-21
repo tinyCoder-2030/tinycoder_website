@@ -50,6 +50,11 @@
                     {!! Form::file('image',  ['class' => 'form-control', 'accept' => 'image/jpeg,image/gif,image/png']) !!}
                 </div>
                 <div class="col-12 form-group">
+                    {!! Form::label('abstract', 'abstract*', ['class' => 'control-label']) !!}
+                    {!! Form::text('abstract', old('abstract'), ['class' => 'form-control ']) !!}
+
+                </div>
+                <div class="col-12 form-group">
                     {!! Form::label('content', 'content*', ['class' => 'control-label']) !!}
                     {!! Form::textarea('content', old('content'), ['class' => 'form-control ']) !!}
 

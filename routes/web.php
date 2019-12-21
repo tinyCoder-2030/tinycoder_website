@@ -31,6 +31,8 @@ Route::group(['middleware' => ['auth', 'roles'], 'roles' => ['admin']], function
     Route::resource('aboutus','Admin\AboutUsController');
     Route::resource('admins','Admin\AdminController');
     Route::resource('blog','Admin\BlogController');
+    Route::resource('contact','Admin\ContactUsController');
+    Route::get('get-contact-data', ['uses' => 'Admin\ContactUsController@getData', 'as' => 'contact.get_data']);
     Route::get('get-blog-data', ['uses' => 'Admin\BlogController@getData', 'as' => 'blog.get_data']);
     Route::resource('socialNetwork','Admin\SocialNetworkController');
  

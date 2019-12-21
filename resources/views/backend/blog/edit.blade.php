@@ -49,9 +49,14 @@
                     {!! Form::label('image', 'image*', ['class' => 'control-label']) !!}
                     {!! Form::file('image',  ['class' => 'form-control', 'accept' => 'image/jpeg,image/gif,image/png']) !!}
                 @if( $blog->image())
-              <img src="{{$blog->image()}}">
+              <img width="500px" src="{{$blog->image()}}">
               @endif
                </div>
+                   <div class="col-12 form-group">
+                    {!! Form::label('abstract', 'abstract*', ['class' => 'control-label']) !!}
+                    {!! Form::text('abstract', old('abstract'), ['class' => 'form-control ']) !!}
+
+                </div>
                 <div class="col-12 form-group">
                     {!! Form::label('content', 'content*', ['class' => 'control-label']) !!}
                     {!! Form::textarea('content', old('content'), ['class' => 'form-control ']) !!}

@@ -17,7 +17,7 @@ class HomeController extends Controller
     $socials = SocialNetwork::all();
     $workshops=Workshop::latest()->paginate(3);
     $testimonials=Testimonial::all();
-    $blogs=Blog::latest()->paginate(3);
+    $blogs=Blog::latest()->take(4)->get();
 
         return view('frontend.home',compact('workshops','testimonials','socials','blogs'));
     } 

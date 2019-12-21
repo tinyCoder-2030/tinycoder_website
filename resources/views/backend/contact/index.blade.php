@@ -1,19 +1,22 @@
 @extends('backend.layouts.app')
 
-@section('title','blog'.' | '.'Tiny Coder')
+@section('title','Contact us'.' | '.'Tiny Coder')
 @section('content')
 <div class="container" style="background-color: #ffffff;margin-left: 0px;padding-right:60px;">
     <section class="content">
       <div class="row">
         <div class="col-12">
+
           <div class="card">
             <div class="card-header "style="margin-bottom:20px;">
              
-              <h3 class="card-title" style="display:inline;">blog </h3>
-               <a style="display:inline;left:25%px;" href="{{ route('blog.create') }}"
-                       class="btn btn-success float-right">create</a>
+              <h3 class="card-title" style="display:inline;">Contact us </h3>
+               
         
             </div>
+            @if(Session::has('success'))
+<p class="alert alert-success">{{ Session::get('success') }}</p>
+@endif
             <!-- /.card-header -->
             <div class="card-body">
                
@@ -23,9 +26,9 @@
                         
             
                         <th>num</th>
-                        <th>title</th>
-                    <th>abstract</th>
-                    <th>photo</th>
+                        <th>user name</th>
+                    <th>email</th>
+                    <th>number</th>
                 
                         <th>actions</th>
                   
@@ -53,7 +56,7 @@
     <script>
 
         $(document).ready(function () {
-            var route = '{{route('blog.get_data')}}';
+            var route = '{{route('contact.get_data')}}';
             $('#example1').DataTable({
             
                 processing: true,
@@ -80,11 +83,9 @@
                 columns: [
               
        {data: "DT_RowIndex", name: 'DT_RowIndex'},
-                    {data: "title", name: 'name'},
-                    {data: "abstract", name: 'abstract'},
-                      {data: 'photo', name: 'photo',
-    "render": function(data, type, row) {
-        return '<img width="400px" style="height: 200px;" src="'+data+'" />';  }},
+                    {data: "name", name: 'name'},
+                    {data: "email", name: 'email'},
+                      {data: "number", name: 'number'},
                     {data: "actions", name: "actions"}
                 ],
 
