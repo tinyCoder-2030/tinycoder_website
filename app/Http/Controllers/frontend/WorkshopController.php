@@ -16,7 +16,7 @@ class WorkshopController extends Controller
     public function index()
     {
         $socials = SocialNetwork::all();
-        $workshops = Workshop::all();
+        $workshops = Workshop::paginate(6);
         return view('frontend.workshops',compact('workshops','socials'));
     }
 

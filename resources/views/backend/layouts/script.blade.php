@@ -116,4 +116,23 @@
         toolbar : "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages",
     });
  });
+
+ var editor_config = {
+            selector: '#content',
+            directionality: document.dir,
+            path_absolute: "/",
+            menubar: 'edit insert view format table',
+            plugins: [
+                "advlist autolink lists link image charmap preview hr anchor pagebreak",
+                "searchreplace wordcount visualblocks visualchars code fullscreen",
+                "insertdatetime media save table contextmenu directionality",
+                "paste textcolor colorpicker textpattern"
+            ],
+            toolbar: "insertfile undo redo | formatselect styleselect | bold italic strikethrough forecolor backcolor permanentpen formatpainter | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media | fullscreen code",
+            relative_urls: false,
+            language: document.documentElement.lang,
+            height: 300,
+        }
+        tinymce.init(editor_config);
+
 </script>

@@ -18,6 +18,8 @@ Route::resource('contact-us', 'frontend\ContactController');
 Route::resource('userWorkshop', 'frontend\WorkshopController');
 Route::get('/about-us', 'frontend\HomeController@about')->name('about-us');
 Route::get('/', 'frontend\HomeController@index')->name('index');
+Route::get('/allBlog', 'frontend\HomeController@blog')->name('allBlog');
+Route::get('/allBlog/{blog}', 'frontend\HomeController@showBlog')->name('allBlog.show');
 Route::get('/photo', 'frontend\HomeController@photo')->name('photo');
 Auth::routes();
 
@@ -28,10 +30,12 @@ Route::group(['middleware' => ['auth', 'roles'], 'roles' => ['admin']], function
     Route::resource('roles','Admin\RoleController');
     Route::resource('aboutus','Admin\AboutUsController');
     Route::resource('admins','Admin\AdminController');
-    Route::resource('social','Admin\SocialNetworkController');
-    Route::get('get-social-data', ['uses' => 'Admin\SocialNetworkController@getData', 'as' => 'social.get_data']);
-    Route::resource('testimonials','Admin\TestimonialController');
+    Route::resource('blog','Admin\BlogController');
+    Route::get('get-blog-data', ['uses' => 'Admin\BlogController@getData', 'as' => 'blog.get_data']);
+    Route::resource('socialNetwork','Admin\SocialNetworkController');
  
+    Route::resource('testimonials','Admin\TestimonialController');
+    Route::get('get-social-data', ['uses' => 'Admin\SocialNetworkController@getData', 'as' => 'social.get_data']);
     Route::get('get-testimonials-data', ['uses' => 'Admin\TestimonialController@getData', 'as' => 'testimonials.get_data']);
     Route::resource('photoGallery','Admin\PhotoGalleryController');
     Route::get('get-photoGallery-data', ['uses' => 'Admin\PhotoGalleryController@getData', 'as' => 'photoGallery.get_data']);

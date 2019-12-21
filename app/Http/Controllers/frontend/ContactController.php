@@ -17,8 +17,7 @@ class ContactController extends Controller
     public function index()
     {
         $socials = SocialNetwork::all();
-      return view('contactus',compact('socials'));
-        
+      return view('frontend.contactus',compact('socials')); 
     }
 
     /**

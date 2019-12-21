@@ -26,21 +26,16 @@ class SocialNetworkController extends Controller
         
             $view = "";
             $edit = "";
-    $show="";
-            $delete = "";
-    
                 $edit = view('backend.datatable.action-edit')
-                    ->with(['route' => route('social.edit',['social' => $q->id])])
+                    ->with(['route' => route('socialNetwork.edit',['socialNetwork' => $q->id])])
                     ->render();
-    
                 $view .= $edit;
                   
-           
     
             return $view;
     
         })
-        ->rawColumns(['actions', 'icon'])
+        ->rawColumns(['actions'])
         ->make();
     }
     /**
@@ -83,7 +78,8 @@ class SocialNetworkController extends Controller
      */
     public function edit(SocialNetwork $socialNetwork)
     {
-      $socialNetwork=SocialNetwork::find(request('social'))->first();  
+      
+     
         return view('backend.social.edit',compact('socialNetwork'));
     }
 
@@ -96,7 +92,9 @@ class SocialNetworkController extends Controller
      */
     public function update(Request $request, SocialNetwork $socialNetwork)
     {
-        $testimonial->update($request->all());
+        $socialNetwork->update($request->all());
+        return redirect()->route('socialNetwork.index')
+        ->with('success','social network created successfully');
     }
 
     /**

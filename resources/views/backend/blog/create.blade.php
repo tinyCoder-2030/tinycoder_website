@@ -1,5 +1,5 @@
 @extends('backend.layouts.app')
-@section('title','Social Network'.' | '.'Tiny Coder')
+@section('title','blog'.' | '.'Tiny Coder')
 
 @section('content')
 
@@ -10,11 +10,11 @@
         <div class="col-12">
 
 
-            <h2 style="display:inline">edit social newtwork account</h2>
+            <h2 style="display:inline">Add New blog</h2>
 
 
             <a style="display:inline;float:center;margin-left:50%" class="btn btn-primary"
-                href="{{ route('socialNetwork.index') }}"> show all</a>
+                href="{{ route('blog.index') }}"> show all</a>
 
         </div>
     </div>
@@ -31,7 +31,7 @@
     </div>
     @endif
 
-   {!! Form::model($socialNetwork, ['method' => 'PUT', 'route' => ['socialNetwork.update', $socialNetwork->id], 'files' => true,]) !!}
+    {!! Form::open(['method' => 'POST', 'route' => ['blog.store'], 'files' => true,]) !!}
 
     <div class="card">
         <div class="card-header">
@@ -39,20 +39,21 @@
         </div>
         <div class="card-body">
             <div class="row">
-           
                 <div class="col-12 form-group">
-                    {!! Form::label('link','link' , ['class' => 'control-label']) !!}
-                    {!! Form::text('link', old('link'), ['class' => 'form-control ']) !!}
+                    {!! Form::label('title','title', ['class' => 'control-label']) !!}
+                    {!! Form::text('title', old('title'), ['class' => 'form-control ' ]) !!}
 
                 </div>
-                
-               </div>
-         
-                     <div class="checkbox d-inline mr-4">
-                        {!! Form::hidden('status', 0) !!}
-                        {!! Form::checkbox('status', 1, old('status'), []) !!}
-                        {!! Form::label('status', 'status', ['class' => 'checkbox control-label font-weight-bold']) !!}
-                    </div>
+              
+                 <div class="col-12 form-group">
+                    {!! Form::label('image', 'image*', ['class' => 'control-label']) !!}
+                    {!! Form::file('image',  ['class' => 'form-control', 'accept' => 'image/jpeg,image/gif,image/png']) !!}
+                </div>
+                <div class="col-12 form-group">
+                    {!! Form::label('content', 'content*', ['class' => 'control-label']) !!}
+                    {!! Form::textarea('content', old('content'), ['class' => 'form-control ']) !!}
+
+                </div>
             </div>
         </div>
     </div>

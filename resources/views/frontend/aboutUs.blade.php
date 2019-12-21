@@ -6,12 +6,12 @@
     <div class="container">
       <div class="row slider-text align-items-center justify-content-center text-center">
         <div class="col-lg-12 col-sm-12">
-          <h1 class="mb-4" data-aos="fade-up" data-aos-delay="">نبذه عنا</h1>
+          <h1 class="mb-4" data-aos="fade-up" data-aos-delay=""style="font-family:'cocon-next-arabic';">نبذه عنا</h1>
           <p class="custom-breadcrumbs" data-aos="fade-up" data-aos-delay="100"><a href="index.html">الرئيسية</a> <span class="mx-3">/</span> نبذه عنا</p>
         </div>
       </div>
     </div>
-  </div>
+  </div> 
 
   <div class="section">
     <div class="container">
@@ -65,17 +65,4 @@
   
        
 
-  <div class="bg-primary py-5">
-    <div class="container text-center">
-      <div class="row justify-content-center">
-        <div class="col-lg-7">
-          <h3 class="text-white mb-2 font-weight-normal" data-aos="fade-right" data-aos-delay="">Let's do more together</h3>
-          <p class="text-white mb-4" data-aos="fade-right" data-aos-delay="100">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            
-          <p class="mb-0" data-aos="fade-right" data-aos-delay="200"><a href="contact.html" class="btn btn-outline-white px-4 py-3">Get In Touch!</a></p>
-        </div>
-      </div>
-
-    </div>
-  </div>
 @endsection

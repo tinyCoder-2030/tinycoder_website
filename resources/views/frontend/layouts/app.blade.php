@@ -81,7 +81,7 @@
               <a class="nav-link" href="{{ route('photo') }}">معرض الصور</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="portfolio.html"> المدونة</a>
+              <a class="nav-link" href="{{ route('allBlog') }}"> المدونة</a>
             </li>
             </li>
               @guest
@@ -134,7 +134,7 @@
     <section class="content">
   @yield('content')
      </section>
-  <section class="footer">
+  <section >
    @yield('footer')
 @extends('frontend.layouts.footer')
      </section>

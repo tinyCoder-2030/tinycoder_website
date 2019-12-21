@@ -53,6 +53,14 @@
             </span>
           </a>
         </li>
+         <li>
+          <a href="{{route('blog.index')}}">
+           <i class="fa fa-camera"></i> <span>blog</span>
+            <span class="pull-right-container">
+              <small class="label pull-right bg-green">5</small>
+            </span>
+          </a>
+        </li>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-cogs"></i>
@@ -64,15 +72,14 @@
           <ul class="treeview-menu">
             <li><a href="{{route('aboutus.index')}}"><i class="fa fa-circle-o"></i> about us</a></li>
             <li><a href="pages/charts/morris.html"><i class="fa fa-address-book"></i> contact us</a></li>
-            <li><a href="{{route('social.index')}}"><i class="fa fa-circle-o"></i> social network</a></li>
-             <li><a href="{{route('social.index')}}"><i class="fa fa-circle-o"></i>blog</a></li>
+            <li><a href="{{route('socialNetwork.index')}}"><i class="fa fa-circle-o"></i> social network</a></li>
             {{-- <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li> --}}
           </ul>
         </li>
         <li class="treeview">
-          <a href="#">
+          <a >
             <i class="fa fa-laptop"></i>
-            <span>UI Elements</span>
+            <span>blog</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>

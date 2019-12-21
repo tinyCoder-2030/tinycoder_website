@@ -45,10 +45,7 @@
             	<div class="buttons_container" style="width:100%;background-color:black;color:white;">
             <div class="button  text-center "style="width:100%;color:white;"><a href="#" style="width:100%;color:white;font-family:'cocon-next-arabic'">التسجيل</a></div>
             </div>
-							{{-- <div class="course_author_image">
-								<img src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh">
-							</div>
-							<div class="course_author_name">Michael Smith, <span>Author</span></div> --}}
+				
 						
 						</div>
 						
@@ -57,7 +54,9 @@
 					</div>
 				</div>
  @endforeach
-			
+			<div class="mt-5">
+ {{ $workshops->links() }}
+ </div>		
 		</div>		
 	</div>
  @endsection
