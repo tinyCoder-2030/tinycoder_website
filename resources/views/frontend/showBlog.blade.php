@@ -63,7 +63,8 @@
   	                                    </div>
   	                                </div>
   	                            </div>
-  	                            <div class="news_post_text" >
+  	                            <div class="news_post_text" style="text-align:right;">
+								   <strong style="font-family:'cocon-next-arabic';color:#000000;">{{$blog->abstract}}</strong>
   	                                <strong style="font-family:'cocon-next-arabic';">{!!$blog->content!!}</strong>
   	                            </div>
 

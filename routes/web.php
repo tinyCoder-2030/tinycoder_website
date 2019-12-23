@@ -17,6 +17,12 @@ Route::get('/dashbord', function () {
 Route::resource('contact-us', 'frontend\ContactController');
 Route::resource('userWorkshop', 'frontend\WorkshopController');
 Route::get('/about-us', 'frontend\HomeController@about')->name('about-us');
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login.show');
+// Route::get('password/reset', 'Auth\ResetPasswordController@showResetForm')->name('password.request');
+// Route::get('reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('reset.show');
+// Route::post('login', 'Auth\LoginController@login')->name('login');
+Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register.show');
+// Route::post('register', 'Auth\RegisterController@register')->name('login');
 Route::get('/', 'frontend\HomeController@index')->name('index');
 Route::get('/allBlog', 'frontend\HomeController@blog')->name('allBlog');
 Route::get('/allBlog/{blog}', 'frontend\HomeController@showBlog')->name('allBlog.show');

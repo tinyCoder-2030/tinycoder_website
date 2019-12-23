@@ -24,53 +24,51 @@
 			</div>
 
 			<div class="row course_boxes">
-				  @foreach ($workshops as $workshop)
-				<!-- Popular Course Item -->
-				<div class="col-lg-4 course_box">
-					<div class="card">
-           @if($workshop->image())
-            
-						<img class="card-img-top" style="height:200px;width:100%;" src="{{$workshop->image()}}" >
-            @endif
-						<div class="card-body text-center">
-							<div class="card-title"><a href="courses.html" style="font-family:'cocon-next-arabic'">{{$workshop->name}}</a></div>
-							<div class="card-text" style="font-family:'cocon-next-arabic'">{{$workshop->from_date}}</div>
-              @if($workshop->price==null ||$workshop->price=='')
-              <div class="course_price d-flex flex-column align-items-center justify-content-center" style="margin-right: auto;height: 40px;font-family:'cocon-next-arabic'"><span>مجانية</span></div>
-					@else
-           <div class="course_price d-flex flex-column align-items-center justify-content-center" style="margin-right: auto;height: 40px;"><span>SR {{$workshop->price}}</span></div>
-          @endif
-          	</div>
-            		<div class="price_box d-flex flex-row align-items-center"style=" padding-right: 35px;">
-            	<div class="buttons_container" style="width:100%;background-color:black;color:white;">
-            <div class="button  text-center "style="width:100%;color:white;"><a href="#" style="width:100%;color:white;font-family:'cocon-next-arabic'">التسجيل</a></div>
-            </div>
-				
-						
-						</div>
-						
-							
-					
+
+            @foreach ($workshops as $workshop)
+            <!-- Popular Course Item -->
+            <div class="col-lg-4 course_box">
+                <div class="card">
+                    @if($workshop->image())
+
+                    <img class="card-img-top" style="height:200px;width:100%;" src="{{$workshop->image()}}">
+                    @endif
+                    <div class="card-body text-center">
+                        <div class="card-title"><a href="courses.html"
+                                style="font-family:'cocon-next-arabic'">{{$workshop->name}}</a></div>
+                        <div class="card-text" style="font-family:'cocon-next-arabic'">{{$workshop->from_date}}</div>
+                        @if($workshop->price==null ||$workshop->price=='')
+                        <div class="course_price d-flex flex-column align-items-center justify-content-center"
+                            style="margin-right: auto;height: 40px;font-family:'cocon-next-arabic'"><span>مجانية</span>
+                        </div>
+                        @else
+                        <div class="course_price d-flex flex-column align-items-center justify-content-center"
+                            style="margin-right: auto;height: 40px;"><span>SR {{$workshop->price}}</span></div>
+                        @endif
+                    </div>
+                    <div class="price_box d-flex flex-row align-items-center" style=" padding-right: 35px;padding-top:20px;padding-bottom:20px;">
+                        <div class="buttons_container" style="width:100%;background-color:black;color:white;margin:0px;">
+                            <div class="button  text-center " style="width:100%;color:white;"><a href="#"
+                                    style="width:100%;color:white;font-family:'cocon-next-arabic'">التسجيل</a>
+								
 					</div>
-				</div>
- @endforeach
+                        </div>
+                       
+                    </div>
+
+
+
+                </div>
+            </div>
+            @endforeach
 			<div class="mt-5">
  {{ $workshops->links() }}
- </div>		
+ </div>
 		</div>		
 	</div>
  @endsection
    @section('style')
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Course Project">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-{{-- <link rel="stylesheet" type="text/css" href="{{('course/styles/bootstrap4/bootstrap.min.css')}}"> --}}
-<link href="{{('course/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet')}}" type="text/css">
-<link rel="stylesheet" type="text/css" href="{{('course/plugins/OwlCarousel2-2.2.1/owl.carousel.css')}}">
-<link rel="stylesheet" type="text/css" href="{{('course/plugins/OwlCarousel2-2.2.1/owl.theme.default.css')}}">
-<link rel="stylesheet" type="text/css" href="{{('course/plugins/OwlCarousel2-2.2.1/animate.css')}}">
-<link rel="stylesheet" type="text/css" href="{{('course/styles/main_styles.css')}}">
-<link rel="stylesheet" type="text/css" href="{{('course/styles/responsive.css')}}">
+<link rel="stylesheet" type="text/css" href="{{('css/courses.css')}}">
 <link rel="stylesheet" type="text/css" href="//www.fontstatic.com/f=cocon-next-arabic" />
 <style>
 .owl-carousel .owl-dots.disabled,
@@ -100,16 +98,5 @@
 </style>
    @endsection
    @section('script')
-<script src="{{('course/js/jquery-3.2.1.min.js')}}"></script>
-<script src="{{('course/styles/bootstrap4/popper.js')}}"></script>
-<script src="{{('course/styles/bootstrap4/bootstrap.min.js')}}"></script>
-<script src="{{('course/plugins/greensock/TweenMax.min.js')}}"></script>
-<script src="{{('course/plugins/greensock/TimelineMax.min.js')}}"></script>
-<script src="{{('course/plugins/scrollmagic/ScrollMagic.min.js')}}"></script>
-<script src="{{('course/plugins/greensock/animation.gsap.min.js')}}"></script>
-<script src="{{('course/plugins/greensock/ScrollToPlugin.min.js')}}"></script>
-<script src="{{('course/plugins/OwlCarousel2-2.2.1/owl.carousel.js')}}"></script>
-<script src="{{('course/plugins/scrollTo/jquery.scrollTo.min.js')}}"></script>
-<script src="{{('course/plugins/easing/easing.js')}}"></script>
-<script src="{{('course/js/custom.js')}}"></script>
+
    @endsection

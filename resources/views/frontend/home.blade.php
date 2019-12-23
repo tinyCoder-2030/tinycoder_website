@@ -241,20 +241,8 @@
 
 @endsection
 @section('style')
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Course Project">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-{{-- <link rel="stylesheet" type="text/css" href="{{('course/styles/bootstrap4/bootstrap.min.css')}}"> --}}
-<link href="{{('course/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet')}}" type="text/css">
-<link rel="stylesheet" type="text/css" href="{{('course/styles/elements_styles.css')}}">
-<link rel="stylesheet" type="text/css" href="{{('course/styles/elements_responsive.css')}}">
-<link rel="stylesheet" type="text/css" href="{{('course/plugins/OwlCarousel2-2.2.1/owl.carousel.css')}}">
-<link rel="stylesheet" type="text/css" href="{{('course/plugins/OwlCarousel2-2.2.1/owl.theme.default.css')}}">
-<link rel="stylesheet" type="text/css" href="{{('course/plugins/OwlCarousel2-2.2.1/animate.css')}}">
 
-<link rel="stylesheet" type="text/css" href="{{('course/styles/main_styles.css')}}">
-<link rel="stylesheet" type="text/css" href="{{('course/styles/responsive.css')}}">
-
+<link rel="stylesheet" type="text/css" href="{{('css/courses.css')}}">
 <link rel="stylesheet" type="text/css" href="//www.fontstatic.com/f=cocon-next-arabic" />
 <style>
     .owl-carousel .owl-dots.disabled,
@@ -285,69 +273,11 @@
     }
 
 
-    .effect {
-        cursor: pointer;
-        position: relative;
-        padding: 10px 20px;
-        background: white;
-        font-size: 28px;
-        border-top-right-radius: 10px;
-        border-bottom-left-radius: 10px;
-        transition: all 1s;
-
-        &:after,
-        &:before {
-            content: " ";
-            width: 10px;
-            height: 10px;
-            position: absolute;
-            border: 0px solid #fff;
-            transition: all 1s;
-        }
-
-        &:after {
-            top: -1px;
-            left: -1px;
-            border-top: 5px solid black;
-            border-left: 5px solid black;
-        }
-
-        &:before {
-            bottom: -1px;
-            right: -1px;
-            border-bottom: 5px solid black;
-            border-right: 5px solid black;
-        }
-
-        &:hover {
-            border-top-right-radius: 0px;
-            border-bottom-left-radius: 0px;
-
-            // background:rgba(0,0,0,.5);
-            // color:white;
-            &:before,
-            &:after {
-
-                width: 100%;
-                height: 100%;
-                // border-color:white;
-            }
-        }
-    }
-
-    .data-container {
-        background: #ffebee;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 </style>
 @endsection
 @section('script')
-<script src="{{('course/js/jquery-3.2.1.min.js')}}"></script>
-<script src="{{('course/styles/bootstrap4/popper.js')}}"></script>
-<script src="{{('course/styles/bootstrap4/bootstrap.min.js')}}"></script>
+<script src="{{asset('style/js/jquery-3.2.1.min.js')}}"></script>
+  <script src="{{asset('style/js/jquery-migrate-3.0.1.min.js')}}"></script>
 <script src="{{('course/plugins/greensock/TweenMax.min.js')}}"></script>
 <script src="{{('course/plugins/greensock/TimelineMax.min.js')}}"></script>
 <script src="{{('course/plugins/scrollmagic/ScrollMagic.min.js')}}"></script>

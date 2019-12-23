@@ -47,44 +47,13 @@
    @endsection
 
    @section('style')
-       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="{{('photostyle/fonts/icomoon/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{('css/photo.css')}}">
 
-    {{-- <link rel="stylesheet" href="{{('photostyle/css/bootstrap.min.css')}}"> --}}
-    <link rel="stylesheet" href="{{('photostyle/css/magnific-popup.css')}}">
-    <link rel="stylesheet" href="{{('photostyle/css/jquery-ui.css')}}">
-    <link rel="stylesheet" href="{{('photostyle/css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{('photostyle/css/owl.theme.default.min.css')}}">
-
-    <link rel="stylesheet" href="{{('photostyle/css/bootstrap-datepicker.css')}}">
-
-    <link rel="stylesheet" href="{{('photostyle/fonts/flaticon/font/flaticon.css')}}">
-
-    <link rel="stylesheet" href="{{('photostyle/css/aos.css')}}">
-    <link rel="stylesheet" href="{{('photostyle/css/jquery.scrollbar.css')}}">
-    <link rel="stylesheet" href="{{('photostyle/css/fancybox.min.css')}}">
-    <link rel="stylesheet" href="{{('photostyle/css/swiper.min.css')}}">
-
-    <link rel="stylesheet" href="{{('photostyle/css/style.css')}}">
 <link rel="stylesheet" type="text/css" href="//www.fontstatic.com/f=cocon-next-arabic" />
    @endsection
    @section('script')
- <script src="{{('photostyle/is/jquery-3.3.1.min..js')}}></script>
-  <script src="{{('photostyle/is/jquery-migrate-3.0.1.min..js')}}></script>
-  <script src="{{('photostyle/is/jquery-ui..js')}}></script>
-  <script src="{{('photostyle/is/popper.min..js')}}></script>
-  <script src="{{('photostyle/is/bootstrap.min..js')}}></script>
-  <script src="{{('photostyle/is/owl.carousel.min..js')}}></script>
-  <!-- <script src="{{('photostyle/is/jquery.stellar.min..js')}}></script> -->
-  <script src="{{('photostyle/is/jquery.countdown.min..js')}}></script>
-  <script src="{{('photostyle/is/jquery.magnific-popup.min..js')}}></script>
-  <script src="{{('photostyle/is/bootstrap-datepicker.min..js')}}></script>
-  <script src="{{('photostyle/is/aos..js')}}></script>
+ 
 
-  <script src="{{('photostyle/is/jquery.fancybox.min..js')}}></script>
-  <script src="{{('photostyle/is/swiper.min..js')}}></script>
-  <script src="{{('photostyle/is/jquery.scrollbar..js')}}></script>
-  <script src="{{('photostyle/is/main..js')}}></script>
    @endsection

@@ -13,26 +13,21 @@
   <meta name="keywords" content="" />
   <meta name="author" content="Free-Template.co" />
 
-  <link rel="shortcut icon" href="ftco-32x32.png">
- 
-  <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display:400,400i|Roboto+Mono&display=swap" rel="stylesheet">
-
-  {{-- <link rel="stylesheet" href="{{asset('style/css/animate.css')}}"> --}}
+  <link rel="shortcut icon" href="{{asset('style/images/ftco-32x32.png')}}">
   <link rel="stylesheet" href="{{asset('style/css/social.css')}}">
-  {{-- <link rel="stylesheet" href="{{asset('style/css/owl.carousel.min.css')}}"> --}}
   <link rel="stylesheet" href="{{asset('style/css/jquery.fancybox.min.css')}}">
-
-
   <link rel="stylesheet" href="{{asset('style/fonts/ionicons/css/ionicons.min.css')}}">
   <link rel="stylesheet" href="{{asset('style/fonts/fontawesome/css/font-awesome.min.css')}}">
   <link rel="stylesheet" href="{{asset('style/fonts/flaticon/font/flaticon.css')}}">
-  {{-- <link rel="stylesheet" href="{{asset('style/css/aos.css')}}"> --}}
+ <link rel="stylesheet" href="{{asset('style/css/style.css')}}">
+
+  <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display:400,400i|Roboto+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
     
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css">
   <!-- Theme Style -->
-  <link rel="stylesheet" href="{{asset('style/css/style.css')}}">
+ 
       <link rel="stylesheet" type="text/css" href="//www.fontstatic.com/f=cocon-next-arabic" />
    @yield('style')
 </head>
@@ -52,22 +47,7 @@
    
         <div class="collapse navbar-collapse" id="navbarsExample05">
           <ul class="navbar-nav pl-md-5 ml-auto">
-            {{-- <li class="nav-item">
-              <a class="nav-link" href="{{ route('index') }}">الرئيسية</a>
-            </li>
-         --}}
-            {{-- <li class="nav-item dropdown">
-             @guest
-              <a class="nav-link dropdown-toggle" id="dropdown04" data-toggle="dropdown"
-               aria-expanded="false">التسجيل</a>
-              
-              <div class="dropdown-menu dropdown-toggle" data-toggle="dropdown"aria-labelledby="dropdown04">التسجيل
-                <a class="dropdown-item" href="{{ route('login') }}">تسجيل دخول</a>
-                <a class="dropdown-item" href="{{ route('register') }}">التسجيل</a>
-             
-              </div>
-                @endguest
-            </li> --}}
+  
             <li class="nav-item">
               <a class="nav-link" href="{{ route('userWorkshop.index') }}">الدورات</a>
             </li>
