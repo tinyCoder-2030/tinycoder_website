@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ConfirmsPasswords;
-
+use App\SocialNetwork;
 class ConfirmPasswordController extends Controller
 {
     /*
@@ -18,14 +18,14 @@ class ConfirmPasswordController extends Controller
     |
     */
 
-    use ConfirmsPasswords;
+    use ConfirmsPasswords;  
 
     /**
      * Where to redirect users when the intended url fails.
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -35,5 +35,11 @@ class ConfirmPasswordController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+    }
+
+    public function showConfirmForm()
+    { 
+        $socials = SocialNetwork::all();
+        return view('auth.passwords.confirm',compact('socials'));
     }
 }

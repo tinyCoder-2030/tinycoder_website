@@ -30,7 +30,7 @@ class UserController extends Controller
 
     public function getData()
     {
-        $data = User::role('admin')->get();
+        $data = User::role('student')->get();
         return DataTables::of($data)
             ->addIndexColumn()
             ->addColumn('actions', function ($q)  {
@@ -58,7 +58,7 @@ class UserController extends Controller
                
     $view.=$delete;
                       
-               
+                
     
                 return $view;
     
@@ -91,14 +91,14 @@ class UserController extends Controller
             'email' => 'required|email|unique:users,email',
             'password' => 'required|same:confirm-password',
         ]);
-
+ 
 
         $input = $request->all();
         $input['password'] = Hash::make($input['password']);
 
 
         $user = User::create($input);
-        $user->assignRole('admin');
+        $user->assignRole('student');
 
 
         return redirect()->route('users.index')
@@ -168,7 +168,7 @@ class UserController extends Controller
 
 
         // $user->assignRole($request->input('roles'));
-        $user->assignRole('admin');
+        $user->assignRole('student');
 
 
         return redirect()->route('users.index')

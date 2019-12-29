@@ -1,7 +1,6 @@
 
 
 
-
 @extends('backend.layouts.app')
 
 
@@ -10,17 +9,12 @@
     <section class="content">
       <div class="row">
         <div class="col-12">
-        @if ($message = Session::get('success'))
-<div class="alert alert-success">
-  <p>{{ $message }}</p>
-</div>
-@endif
           <div class="card">
             <div class="card-header "style="margin-bottom:20px;">
              
-              <h3 class="card-title" style="display:inline;">Admin Management </h3>
-               <a style="display:inline;left:25%px;" href="{{ route('admins.create') }}"
-                       class="btn btn-success float-right">create new Admin </a>
+              <h3 class="card-title" style="display:inline;">workshops </h3>
+               <a style="display:inline;left:25%px;" href="{{ route('workshops.create') }}"
+                       class="btn btn-success float-right">create</a>
         
             </div>
             <!-- /.card-header -->
@@ -34,7 +28,7 @@
                                 <th>num</th>
                                 <th>name</th>
                
-                                <th> email</th>
+                                <th> date</th>
   
                             <th>&nbsp; action</th>
                    
@@ -61,7 +55,7 @@
     <script>
 
         $(document).ready(function () {
-            var route = '{{route('admins.get_data')}}';
+            var route = '{{route('workshops.get_data')}}';
             $('#example1').DataTable({
             
                 processing: true,
@@ -89,7 +83,7 @@
 
                     {data: "DT_RowIndex", name: 'DT_RowIndex'},
                     {data: "name", name: 'name'},
-                    {data: "email", name: 'email'},
+                    {data: "from_date", name: 'from_date'},
                     {data: "actions", name: "actions"}
                 ],
 

@@ -30,8 +30,16 @@
           
         </li>
         <li>
-          <a href="{{route('users.index')}}">
+          <a href="{{route('admins.index')}}">
            <i class="	fa fa-users"></i> <span>Admins</span>
+            <span class="pull-right-container">
+              <small class="label pull-right bg-green">5</small>
+            </span>
+          </a>
+        </li>
+          <li>
+          <a href="{{route('users.index')}}">
+           <i class="	fa fa-users"></i> <span>Users</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-green">5</small>
             </span>
@@ -69,7 +77,7 @@
             </span>
           </a>
         </li>
-        <li class="treeview">
+        {{-- <li class="treeview">
           <a href="#">
             <i class="fa fa-cogs"></i>
             <span>page Management</span>
@@ -99,7 +107,17 @@
             <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
           </ul>
         </li>
-        <li class="treeview">
+
+         </li>
+                 <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                 <a href="{{route('logout')}}" class="">Sign out</a>
+                </div>
+              </li> --}}
+        {{-- <li class="treeview">
           <a href="#">
             <i class="fa fa-edit"></i> <span>Forms</span>
             <span class="pull-right-container">
@@ -107,9 +125,9 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
+            <li><a href="{{route('logout')}}"><i class="fa fa-circle-o"></i> logout</a></li>
+            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Profile</a></li>
+          
           </ul>
         </li>
         <li class="treeview">
@@ -194,11 +212,10 @@
             </li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
           </ul>
-        </li>
-        <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
-        <li class="header">LABELS</li>
-        <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
+        </li> --}}
+        <li class="header">...oprtation...</li>
+        <li><a href="{{route('logout')}}"><i class="fa fa-circle-o text-red"></i> <span>logout</span></a></li>
+        <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>profile</span></a></li>
         <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
       </ul>
     </section>

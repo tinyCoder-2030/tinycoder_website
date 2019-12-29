@@ -25,4 +25,10 @@ class Workshop extends Model implements HasMedia
         }
        return null;
       }
+
+
+      public function workshopUsers()
+      {
+          return $this->hasMany(UserWorkshop::class);
+      }
 }

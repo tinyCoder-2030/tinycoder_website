@@ -74,7 +74,20 @@
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                               
+                            @if(auth()->user()->hasRole('admin'))
+                                   <a class="dropdown-item" href=" {{ route('dashbord') }}"
+                                       >
+                                      لوحة التحكم
+                                    </a>
+                                    @endif
+                                       @if(auth()->user()->hasRole('student'))
+                                   <a class="dropdown-item" href=" {{ route('user-info.index') }}"
+                                       >
+                                      لوحة معلوماتي
+                                    </a>
+                                    @endif
+                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                        تسجيل خروج
@@ -82,12 +95,6 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
-                            @if(auth()->user()->hasRole('admin'))
-                                   <a class="dropdown-item" href=" {{ route('dashbord') }}"
-                                       >
-                                      لوحة التحكم
-                                    </a>
-                                    @endif
                                      </div>
                             </li>
             @endguest
@@ -100,9 +107,11 @@
           </ul>
 
           <div class="navbar-nav ml-auto">
-            <form method="post" class="search-form">
+           <form method="GET"  class="search-form"  action="{{ route('search') }}">
+              @csrf
               <span class="icon ion ion-search"></span>
-              <input type="text" class="form-control" placeholder="Search...">
+              <input type="text"  name="search" class="form-control" placeholder="البحث عن ...">
+                {{-- <button type="submit"  style="display:hidden;"> hi</button> --}}
             </form>
           </div>
 
@@ -116,7 +125,7 @@
      </section>
   <section >
    @yield('footer')
-{{-- @extends('frontend.layouts.footer') --}}
+@extends('frontend.layouts.footer')
      </section>
   <!-- END footer -->
 

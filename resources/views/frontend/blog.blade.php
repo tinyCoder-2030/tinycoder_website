@@ -121,8 +121,8 @@
    @endsection
    @section('script')
 <script src="{{asset('course/js/jquery-3.2.1.min.js')}}"></script>
-<script src="{{asset('course/styles/bootstrap4/popper.js')}}"></script>
-<script src="{{asset('course/styles/bootstrap4/bootstrap.min.js')}}"></script>
+<script src="{{asset('course/styles/bootstrap4/popper.js')}}"></script> 
+{{-- <script src="{{asset('course/styles/bootstrap4/bootstrap.min.js')}}"></script> --}}
 <script src="{{asset('course/plugins/greensock/TweenMax.min.js')}}"></script>
 <script src="{{asset('course/plugins/greensock/TimelineMax.min.js')}}"></script>
 <script src="{{asset('course/plugins/scrollmagic/ScrollMagic.min.js')}}"></script>

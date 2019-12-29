@@ -15,14 +15,14 @@
 
   <div class="section">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 order-md-2" data-aos="fade-up" data-aos-delay="100">
+      <div class="row align-items-center" >
+        <div class="col-md-6 order-md-2" data-aos="fade-up" data-aos-delay="100" >
           <figure class="img-dotted-bg">
             <img src="{{asset('style/images/vision.png')}}" alt="Image" class="img-fluid">
           </figure>
         </div>
         <div class="col-md-5 mr-auto" data-aos="fade-up" data-aos-delay="" style="text-align:center;font-family:'cocon-next-arabic';">
-          <h2 class="mb-4 section-title"><strong style="text-align:center;font-family:'cocon-next-arabic';">الهدف</strong></h2>
+          <h2 class="mb-4 section-title" ><strong style="text-align:center;font-family:'cocon-next-arabic';">الهدف</strong></h2>
           <p style="background-color:#FED36B;color:white;padding:20px;border-radius:25px;">{!! $aboutus->goal!!}</p>
           <h2 class="mb-4 section-title"><strong style="text-align:center;font-family:'cocon-next-arabic';">الرؤية</strong></h2>
           <p style="background-color:#77D0F8;color:white;padding:20px;border-radius:25px;">{!! $aboutus->vision!!}</p>
@@ -39,8 +39,9 @@
   <div class="section" >
     <div class="container">
       <div class="row justify-content-center mb-5">
-        <div class="col-md-8 text-center" data-aos="fade-up" data-aos-delay="">
+        <div class="col-md-8 text-center" data-aos="fade-up" data-aos-delay style="border-bottom:2px solid #b6432e; ">
           <h2 class="mb-4 section-title" style="font-family:'cocon-next-arabic';">تعرف على <strong>فريقنا</strong></h2>
+          
         </div>
       </div>
       <div class="row">

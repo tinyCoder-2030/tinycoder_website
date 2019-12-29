@@ -59,7 +59,7 @@
                     </div>
                     <div class="price_box d-flex flex-row align-items-center" style=" padding-right: 35px;padding-top:20px;padding-bottom:20px;">
                         <div class="buttons_container" style="width:100%;background-color:black;color:white;margin:0px;">
-                            <div class="button  text-center " style="width:100%;color:white;"><a href="#"
+                            <div class="button  text-center " style="width:100%;color:white;"><a href="{{route('workshop-register.show',$workshop->id)}}"
                                     style="width:100%;color:white;font-family:'cocon-next-arabic'">التسجيل</a>
 								
 					</div>
